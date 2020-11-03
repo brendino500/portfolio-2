@@ -1,0 +1,10 @@
+{
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#AE6CA1",
+    "titleBar.activeBackground": "#AE6CA1",
+    "titleBar.inactiveBackground": "#AE6CA1",
+    "titleBar.inactiveForeground": "#211E2B",
+    "titleBar.activeForeground": "#211E2B",
+  },
+  "window.title": "P O R T F O L I O V-2 "
+}
