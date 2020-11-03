@@ -11,7 +11,7 @@ function App() {
         <Route exact path="/" component={Home} />
       </main>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

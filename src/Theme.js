@@ -9,7 +9,7 @@ export default createMuiTheme({
       main: '#323e47',
     },
     typography: {
-      fontFamily: 'Libre Baskerville',
+      fontFamily: ['Libre Baskerville', 'Work Sans', 'Neuton'],
       h1: {
         fontSize: 42,
         letterSpacing: 10,
@@ -31,7 +31,6 @@ export default createMuiTheme({
         letterSpacing: 2,
       },
       p: {
-        fontFamily: 'Work Sans',
         fontSize: 18,
         letterSpacing: 1,
       },
