@@ -1,9 +1,9 @@
 import React from 'react'
 import Theme from '../../Theme'
-import jest_icon from '../../assets/jest_icon.png'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, ThemeProvider, Grid } from '@material-ui/core'
+import { SiJest } from 'react-icons/si'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -106,11 +106,7 @@ export default function Beginner() {
         </Grid>
         <Grid className={classes.iconAndText}>
           <div className="materialIconsSkills">
-            <img
-              src={jest_icon}
-              alt="jestIcon"
-              className="materialIconSkillsDetails"
-            />
+            <SiJest className="materialIconSkillsDetails" />
             <Typography className={classes.text}>Jest</Typography>
           </div>
         </Grid>

@@ -1,9 +1,9 @@
 import React from 'react'
 import Theme from '../../Theme'
-import materialUI from '../../assets/materialUI.png'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container, ThemeProvider, Grid } from '@material-ui/core'
+import { SiMaterialUi } from 'react-icons/si'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -121,11 +121,7 @@ export default function Confident() {
           </Grid>
           <Grid className={classes.iconAndText}>
             <div className="materialIconsSkills">
-              <img
-                src={materialUI}
-                alt="materialui"
-                className="materialIconSkillsDetails  material-skills"
-              />
+              <SiMaterialUi className="materialIconSkillsDetails  material-skills" />
               <Typography className={classes.text}>Material UI</Typography>
             </div>
           </Grid>
