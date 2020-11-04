@@ -4,10 +4,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/common/Home'
 import Navbar from './components/common/Navbar'
 import Skills from './components/skills/Skills'
+import Projects from './components/projects/Projects'
 
 function App() {
   const sectionHomeRef = useRef(null)
   const sectionSkillsRef = useRef(null)
+  const sectionProjectsRef = useRef(null)
 
   const scrollTo = (ref) => {
     window.scroll({
@@ -24,15 +26,18 @@ function App() {
           <button onClick={() => scrollTo(sectionHomeRef)}>Brenda Ty</button>
           <br />
           <button onClick={() => scrollTo(sectionSkillsRef)}>Skills</button>
-          {/* <br />
-          <button onClick={() => scrollTo(section3Ref)}>Section 3</button> */}
+          <br />
+          <button onClick={() => scrollTo(sectionProjectsRef)}>Projects</button>
         </div>
         <main>
           <div ref={sectionHomeRef} style={{ height: '100vh' }}>
             <Route exact path="/" component={Home} />
           </div>
-          <div ref={sectionSkillsRef} style={{ height: '100vh' }}>
+          <div ref={sectionSkillsRef} style={{ height: '110vh' }}>
             <Skills />
+          </div>
+          <div ref={sectionProjectsRef} style={{ height: '250vh' }}>
+            <Projects />
           </div>
         </main>
       </BrowserRouter>

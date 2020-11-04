@@ -1,7 +1,5 @@
 import React from 'react'
-import Confident from './Confident'
-import Familiar from './Familiar'
-import Beginner from './Beginner'
+import JungleKobenhavn from './JungleKobenhavn'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container } from '@material-ui/core'
@@ -29,15 +27,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function Skills() {
+export default function Projects() {
   const classes = useStyles()
 
   return (
     <Container className={classes.root}>
-      <Typography className={classes.title}>SKILLS</Typography>
-      <Confident />
-      <Familiar />
-      <Beginner />
+      <Typography varient="h1" className={classes.title}>
+        PROJECTS
+      </Typography>
+      <JungleKobenhavn />
     </Container>
   )
 }

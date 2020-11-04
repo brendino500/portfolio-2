@@ -12,13 +12,33 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   title: {
-    fontFamily: 'Libre Baskerville',
     fontSize: 25,
-    textTransform: 'uppercase',
+    fontFamily: 'Libre Baskerville',
+    color: '#d3c9c0',
     letterSpacing: 2,
     marginTop: '10vh',
-    marginBottom: '4vh',
-    textAlign: 'center',
+    marginBottom: 10,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      fontSize: 20,
+      textAlign: 'center',
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      fontSize: 24,
+      textAlign: 'center',
+      letterSpacing: 2,
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      fontSize: 22,
+      textAlign: 'center',
+      letterSpacing: 4,
+      marginBottom: 20,
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: 22,
+      textAlign: 'center',
+      letterSpacing: 4,
+      marginBottom: 20,
+    },
   },
   iconAndText: {
     display: 'flex',
@@ -61,7 +81,7 @@ export default function Confident() {
     <ThemeProvider theme={Theme}>
       <Container className={classes.root}>
         <Typography color="primary" className={classes.title}>
-          Confident
+          CONFIDENT
         </Typography>
         <Grid
           container
