@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { Typography, Card, CardContent, Container } from '@material-ui/core'
+import { Typography, Card } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: 2,
+    flexGrow: 1,
+    backgroundColor: '#394651',
+    padding: 30,
+    margin: 8,
   },
   title: {
     fontSize: 35,
@@ -78,27 +81,19 @@ export default function FreelancePhotographer() {
   const classes = useStyles()
 
   return (
-    <Container className={classes.root}>
+    <Card className={classes.root}>
       <Typography className={classes.title}>Freelance Photographer</Typography>
       <Typography className={classes.subtitle}>
         July 2016 ~ February 2020
       </Typography>
       <Typography className={classes.text}>
-        I am <i>completely self taught</i> in photography. My interest began
-        when I was 16 because I was jealous of the photography A level class
-        developing their own photos in the schools lightroom.
-        {<br />}
-        {<br />}
-        I've been <i>published in the Telegraph and Caffeine Magazine</i>{' '}
-        multiple times. I focus on digital photography (but my heart lies in
-        analogue). I have been{' '}
-        <i>commissioned by companies and individuals, </i>
-        mainly shooting portraiture and taking photos for coffee shops social
-        media.
-        {<br />}
-        {<br />}
-        My past clients include Kaffeine, Rosslyn, The Attendant, V69 Coffee,
-        Midas Coffee and The Roasting Party.
+        • I am <i>completely self taught</i> in photography.
+        {<br />}• <i>Published in the Telegraph and Caffeine Magazine</i>{' '}
+        multiple times.
+        {<br />}• I focus on digital photography and I have been{' '}
+        <i>commissioned by companies and individuals</i>
+        {<br />}• Past clients include Kaffeine, Rosslyn, The Attendant, V69
+        Coffee, Midas Coffee and The Roasting Party.
         {<br />}
         {<br />}
       </Typography>
@@ -107,6 +102,6 @@ export default function FreelancePhotographer() {
         {<br />}
         Analogue: Canon AV-1, Canon 50mm f1.2
       </Typography>
-    </Container>
+    </Card>
   )
 }

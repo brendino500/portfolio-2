@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { Typography, Card, CardContent, Container } from '@material-ui/core'
+import { Typography, Card } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: 2,
+    flexGrow: 1,
+    backgroundColor: '#394651',
+    padding: 30,
+    margin: 8,
   },
   title: {
     fontSize: 35,
@@ -62,21 +65,21 @@ export default function GeneralAssembly() {
   const classes = useStyles()
 
   return (
-    <Container>
+    <Card className={classes.root}>
       <Typography className={classes.title}>General Assembly</Typography>
       <Typography className={classes.subtitle}>
         June 2020 ~ September 2020
       </Typography>
       <Typography className={classes.text}>
-        This was a 12-week intense coding course that recreated many aspects of
-        a developers{' '}
+        • This was a 12-week intense coding course that recreated many aspects
+        of a developers{' '}
         <i>
           typical daily routine including morning stand ups, pair programming
           and accountability for self-managed deadlines.
         </i>
         {<br />}
-        {<br />}
-        The skills that I have learnt through four main projects include:{' '}
+        {<br />}• The skills that I have learnt through four main projects
+        include:{' '}
         <i>
           planning and wireframes, leading projects, time management and self
           study.
@@ -84,6 +87,6 @@ export default function GeneralAssembly() {
         {<br />}
         {<br />}
       </Typography>
-    </Container>
+    </Card>
   )
 }
