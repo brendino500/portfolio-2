@@ -1,54 +1,14 @@
-// import React from 'react'
-// import GeneralAssembly from './GeneralAssembly'
-// import FreelancePhotographer from './FreelancePhotographer'
-// import CraftLondon from './CraftLondon'
-// import ManchesterUni from './ManchesterUni'
-
-// import { makeStyles } from '@material-ui/core/styles'
-// import { Typography, Container } from '@material-ui/core'
-
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//   },
-//   title: {
-//     flexGrow: 1,
-//     fontFamily: 'Neuton',
-//     fontSize: '42px',
-//     letterSpacing: '10px',
-//     color: '#d3c9c0',
-//     textAlign: 'center',
-//     [theme.breakpoints.between('xs', 'sm')]: {
-//       fontSize: 30,
-//     },
-//     [theme.breakpoints.between('sm', 'md')]: {
-//       fontSize: 38,
-//     },
-//     [theme.breakpoints.between('md', 'lg')]: {
-//       fontSize: 40,
-//     },
-//   },
-// }))
-
-// export default function Experience() {
-//   const classes = useStyles()
-
-//   return (
-//     <Container className={classes.root}>
-//       <Typography className={classes.title}>EXPERIENCE</Typography>
-//       <GeneralAssembly />
-//       <FreelancePhotographer />
-//       <CraftLondon />
-//       <ManchesterUni />
-//     </Container>
-//   )
-// }
-
 import React from 'react'
 import GeneralAssembly from './GeneralAssembly'
 import FreelancePhotographer from './FreelancePhotographer'
 import CraftLondon from './CraftLondon'
 import ManchesterUni from './ManchesterUni'
+
+import { HiOutlineCode } from 'react-icons/hi'
+import { GiPhotoCamera, GiCoffeeBeans } from 'react-icons/gi'
+import { IoIosMusicalNotes } from 'react-icons/io'
+import { BiCoffee } from 'react-icons/bi'
+import { FaCameraRetro } from 'react-icons/fa'
 
 import { makeStyles } from '@material-ui/core/styles'
 import {
@@ -109,8 +69,8 @@ export default function SimpleAccordion() {
             id="panel3a-header"
           >
             <Typography className={classes.heading}>
+              <HiOutlineCode className="experience-icon" />
               Coding
-              <i class="fal fa-laptop-code"></i>
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -124,7 +84,10 @@ export default function SimpleAccordion() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography className={classes.heading}>Photography</Typography>
+            <Typography className={classes.heading}>
+              <GiPhotoCamera className="experience-icon" />
+              Photography
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <FreelancePhotographer />
@@ -137,7 +100,10 @@ export default function SimpleAccordion() {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography className={classes.heading}>Coffee</Typography>
+            <Typography className={classes.heading}>
+              <BiCoffee className="experience-icon" />
+              Coffee
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <CraftLondon />
@@ -150,7 +116,10 @@ export default function SimpleAccordion() {
             aria-controls="panel14a-content"
             id="panel4a-header"
           >
-            <Typography className={classes.heading}>Music</Typography>
+            <Typography className={classes.heading}>
+              <IoIosMusicalNotes className="experience-icon" />
+              Music
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <ManchesterUni />
