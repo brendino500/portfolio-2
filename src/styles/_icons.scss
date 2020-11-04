@@ -1,0 +1,73 @@
+.devicon-javascript-plain,
+.devicon-git-plain,
+.devicon-github-plain,
+.devicon-css3-plain,
+.devicon-nodejs-plain,
+.devicon-slack-plain,
+.devicon-trello-plain,
+.devicon-sass-original,
+.devicon-html5-plain,
+.devicon-javascript-plain,
+.devicon-react-original,
+.devicon-visualstudio-plain,
+.materialUI,
+.devicon-npm-original-wordmark,
+.devicon-mongodb-plain,
+.devicon-python-plain,
+.devicon-django-plain,
+.devicon-intellij-plain,
+.devicon-java-plain,
+.devicon-postgresql-plain,
+.devicon-typescript-plain,
+.devicon-express-original {
+  color: #d3c9c0;
+  font-size: 80px;
+}
+
+// SKILLS DETAIL ICONS
+
+.skills-details-icon {
+  font-size: 30px;
+  text-align: center;
+}
+
+.materialIconSkillsDetails {
+  width: 28px;
+  display: block;
+}
+
+@media only screen and (max-width: 400px) {
+  .material-skills {
+    margin-left: 25%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  .material-skills {
+    margin-left: 25%;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  .skills-details-icon {
+    font-size: 35px;
+    text-align: center;
+  }
+  .materialIconSkillsDetails {
+    width: 33px;
+    display: block;
+  }
+  .material-skills {
+    margin-left: 25%;
+  }
+}
+
+@media only screen and (min-width: 1920px) and (max-width: 2700px) {
+  .skills-details-icon {
+    font-size: 45px;
+    text-align: center;
+  }
+  .material-skills {
+    margin-left: 30%;
+  }
+}
