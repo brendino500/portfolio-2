@@ -79,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FreelancePhotographer() {
   const classes = useStyles()
-
   return (
     <Card className={classes.root}>
       <Typography className={classes.title}>Freelance Photographer</Typography>
