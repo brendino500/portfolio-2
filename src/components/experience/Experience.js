@@ -49,18 +49,21 @@ import GeneralAssembly from './GeneralAssembly'
 import FreelancePhotographer from './FreelancePhotographer'
 import CraftLondon from './CraftLondon'
 import ManchesterUni from './ManchesterUni'
-import code from '../../assets/code.svg'
 
 import { makeStyles } from '@material-ui/core/styles'
-import Accordion from '@material-ui/core/Accordion'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import Typography from '@material-ui/core/Typography'
+import {
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from '@material-ui/core/'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: '75%',
+    margin: '0 auto',
+    marginTop: '10vh',
   },
   title: {
     flexGrow: 1,
@@ -87,65 +90,73 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     textAlign: 'center',
   },
+  accordion: {
+    backgroundColor: '#323e47',
+  },
 }))
 
 export default function SimpleAccordion() {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <>
       <Typography className={classes.title}>EXPERIENCE</Typography>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography className={classes.heading}>Photography</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <FreelancePhotographer />
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>Coffee</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <CraftLondon />
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel13a-content"
-          id="panel3a-header"
-        >
-          <Typography className={classes.heading}>
-            Coding
-            <i class="fal fa-laptop-code"></i>
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <GeneralAssembly />
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel14a-content"
-          id="panel4a-header"
-        >
-          <Typography className={classes.heading}>Music</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <ManchesterUni />
-        </AccordionDetails>
-      </Accordion>
-    </div>
+      <div className={classes.root}>
+        <Accordion className={classes.accordion}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel13a-content"
+            id="panel3a-header"
+          >
+            <Typography className={classes.heading}>
+              Coding
+              <i class="fal fa-laptop-code"></i>
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <GeneralAssembly />
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion className={classes.accordion}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={classes.heading}>Photography</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <FreelancePhotographer />
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion className={classes.accordion}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel2a-content"
+            id="panel2a-header"
+          >
+            <Typography className={classes.heading}>Coffee</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <CraftLondon />
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion className={classes.accordion}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel14a-content"
+            id="panel4a-header"
+          >
+            <Typography className={classes.heading}>Music</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <ManchesterUni />
+          </AccordionDetails>
+        </Accordion>
+      </div>
+    </>
   )
 }
