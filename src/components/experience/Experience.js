@@ -2,6 +2,7 @@ import React from 'react'
 import GeneralAssembly from './GeneralAssembly'
 import FreelancePhotographer from './FreelancePhotographer'
 import CraftLondon from './CraftLondon'
+import ManchesterUni from './ManchesterUni'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container } from '@material-ui/core'
@@ -38,6 +39,7 @@ export default function Experience() {
       <GeneralAssembly />
       <FreelancePhotographer />
       <CraftLondon />
+      <ManchesterUni />
     </Container>
   )
 }
