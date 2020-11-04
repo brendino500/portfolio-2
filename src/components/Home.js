@@ -1,18 +1,21 @@
 import React from 'react'
 
-import Theme from '../Theme'
 import { makeStyles } from '@material-ui/core/styles'
-import { ThemeProvider, Typography } from '@material-ui/core/'
+import { Container, Typography, Grid } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    marginTop: '15%',
   },
   title: {
-    fontFamily: 'Libre Baskerville',
-  },
-  subtitle: {
-    // fontFamily: 'Libre Baskerville',
+    flexGrow: 1,
+    fontFamily: 'Neuton',
+    color: '#d3c9c0',
+    fontSize: 45,
+    letterSpacing: 2,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 30,
+    },
   },
 }))
 
@@ -20,16 +23,14 @@ export default function Home() {
   const classes = useStyles()
 
   return (
-    <ThemeProvider theme={Theme}>
-      <div className={classes.root}>
-        <Typography color="primary" variant="h1" className={classes.title}>
-          Brenda Ty
-        </Typography>
+    <Container maxWidth="lg" className={classes.root}>
+      <Grid container direction="column" alignItems="flex-start">
+        <Typography className={classes.title}>Hey, I'm Brenda.</Typography>
         <br />
-        <Typography color="primary" variant="h3" className={classes.subtitle}>
-          Fullstack Devloper • Plant Horder
+        <Typography className={classes.title}>
+          Fullstack developer • Plant hoarder
         </Typography>
-      </div>
-    </ThemeProvider>
+      </Grid>
+    </Container>
   )
 }
