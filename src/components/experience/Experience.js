@@ -49,6 +49,7 @@ import GeneralAssembly from './GeneralAssembly'
 import FreelancePhotographer from './FreelancePhotographer'
 import CraftLondon from './CraftLondon'
 import ManchesterUni from './ManchesterUni'
+import code from '../../assets/code.svg'
 
 import { makeStyles } from '@material-ui/core/styles'
 import Accordion from '@material-ui/core/Accordion'
@@ -124,7 +125,10 @@ export default function SimpleAccordion() {
           aria-controls="panel13a-content"
           id="panel3a-header"
         >
-          <Typography className={classes.heading}>Coding</Typography>
+          <Typography className={classes.heading}>
+            Coding
+            <i class="fal fa-laptop-code"></i>
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <GeneralAssembly />
