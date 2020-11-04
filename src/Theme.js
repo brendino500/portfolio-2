@@ -9,11 +9,11 @@ export default createMuiTheme({
       main: '#323e47',
     },
     typography: {
-      fontFamily: ['Libre Baskerville', 'Work Sans', 'Neuton'],
+      fontFamily: `'Libre Baskerville' 'Work Sans' 'Neuton'`,
       h1: {
+        fontFamily: 'Libre Baskerville',
         fontSize: 42,
         letterSpacing: 10,
-        fontFamily: 'Libre Baskerville',
       },
       h2: {
         fontFamily: 'Libre Baskerville',

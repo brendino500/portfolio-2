@@ -1,24 +1,29 @@
 import React from 'react'
-import Theme from '../Theme'
+
 import { makeStyles } from '@material-ui/core/styles'
-import {
-  ThemeProvider,
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  IconButton,
-} from '@material-ui/core/'
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core/'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   title: {
     flexGrow: 1,
+  },
+  button: {
+    color: '#d3c9c0',
+    fontFamily: 'Libre Baskerville',
+    letterSpacing: 2,
+  },
+  buttonTitle: {
+    color: '#d3c9c0',
+    fontFamily: 'Libre Baskerville',
+    letterSpacing: 4,
+    fontSize: 20,
+    flexGrow: 1,
+  },
+  buttonGroup: {
+    marginRight: 0,
   },
 }))
 
@@ -26,28 +31,26 @@ export default function Navbar() {
   const classes = useStyles()
 
   return (
-    <ThemeProvider theme={Theme}>
-      <div className={classes.root}>
-        <AppBar
-          position="static"
-          style={{
-            background: 'transparent',
-            boxShadow: 'none',
-          }}
-        >
-          <Toolbar>
-            <Button>Brenda Ty</Button>
-            <Typography color="primary" variant="p" className={classes.title}>
-              Brenda Ty
-            </Typography>
-            <Button color="inherit">Skills</Button>
-            <Button color="inherit">Projects</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Experience</Button>
-            <Button color="inherit">Contact</Button>
-          </Toolbar>
-        </AppBar>
-      </div>
-    </ThemeProvider>
+    <div className={classes.root}>
+      <AppBar
+        position="static"
+        style={{
+          background: 'transparent',
+          boxShadow: 'none',
+        }}
+      >
+        <Toolbar>
+          <Typography className={classes.buttonTitle}>
+            <Button className={classes.buttonTitle}>Brenda Ty</Button>
+          </Typography>
+
+          <Button className={classes.button}>Skills</Button>
+          <Button className={classes.button}>Projects</Button>
+          <Button className={classes.button}>About</Button>
+          <Button className={classes.button}>Experience</Button>
+          <Button className={classes.button}>Contact</Button>
+        </Toolbar>
+      </AppBar>
+    </div>
   )
 }
