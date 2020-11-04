@@ -18,3 +18,5 @@ export default function About() {
     </Container>
   )
 }
+
+//https://i.ibb.co/415wtzS/photo-for-website.jpg
