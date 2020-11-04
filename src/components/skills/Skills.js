@@ -1,6 +1,7 @@
 import React from 'react'
 import Confident from './Confident'
 import Familiar from './Familiar'
+import Beginner from './Beginner'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container } from '@material-ui/core'
@@ -38,6 +39,7 @@ export default function Skills() {
       </Typography>
       <Confident />
       <Familiar />
+      <Beginner />
     </Container>
   )
 }
