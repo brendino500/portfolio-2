@@ -109,29 +109,24 @@ export default function WeatherxTfl() {
     <Card className={classes.root}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography className={classes.title}>Nalu</Typography>
+          <Typography className={classes.title}>Weather x TfL</Typography>
           <Typography className={classes.subtitle}>
-            Group Project • 7 Days
+            Paired Project • 48 Hours
           </Typography>
         </CardContent>
         <div className={classes.text}>
           <Typography className={classes.text}>
-            'Nalu' is a <i>social website</i> for the surfing community. Users
-            can add a surf location as well as rate and comment on other users
-            surf locations. For each surf spot, we{' '}
-            <i>pulled from two weather APIs</i>- one for the local weather and
-            one for the marine weather.
+            Out of the whole of the General Assembly course, this was, by far,
+            the <i>most fun project!</i> I was paired with Julien Xemard, and
+            little did we know that would start our intense coding relationship(
+            <s>friendship?</s>)
             <br />
             <br />
-            This was the first project{' '}
-            <i>
-              collaborating with three other developers and simultaneously using
-              Git.{' '}
-            </i>
-            It was also a{' '}
-            <i>HUGE learning curve debugging other developers code.</i> That was
-            incredibly difficult at first, but it was the best lesson I took
-            from the whole project.
+            We wanted to create an app with geolocation (if the user accepted)
+            which would gather the local weather and time for their current
+            location. The other pages were linked to the current London Tube
+            line services, the TfL Bike Points as well as the Air Quality Index
+            in London.
           </Typography>
         </div>
         <div>
@@ -142,7 +137,7 @@ export default function WeatherxTfl() {
           >
             <Grid>
               <IconButton
-                href="https://github.com/brendino500/nalu"
+                href="https://github.com/brendino500/sei-project-2"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -152,7 +147,7 @@ export default function WeatherxTfl() {
                 />
               </IconButton>
               <IconButton
-                href="https://naluwave.herokuapp.com/"
+                href="https://weather-bike-tube.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -169,21 +164,23 @@ export default function WeatherxTfl() {
               <SiSass className={classes.techIcon} />
               <SiBulma className={classes.techIcon} />
               <SiReact className={classes.techIcon} />
-              <SiMongodb className={classes.techIcon} />
               <SiNpm className={classes.techIcon} />
               <SiNodeDotJs className={classes.techIcon} />
-              <i className="devicon-express-original skills-details-icon"></i>
               <SiNetlify className={classes.techIcon} />
             </Grid>
           </Grid>
         </div>
       </div>
       <a
-        href="https://naluwave.herokuapp.com/"
+        href="https://weather-bike-tube.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <CardMedia className={classes.image} id="nalu" alt="nalu" />
+        <CardMedia
+          className={classes.image}
+          id="weather-tfl"
+          alt="weather-tfl"
+        />
       </a>
     </Card>
   )

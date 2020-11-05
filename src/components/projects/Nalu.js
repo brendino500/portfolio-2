@@ -19,7 +19,7 @@ import {
   SiBulma,
   SiSass,
   SiReact,
-  SiNetlify,
+  SiHeroku,
   SiNpm,
   SiMongodb,
   SiNodeDotJs,
@@ -94,11 +94,11 @@ export default function Nalu() {
 
   useEffect(() => {
     new hoverEffect({
-      parent: document.querySelector('#nalu'),
+      parent: document.querySelector('#weather-tfl'),
       intensity: 0.3,
-      image1: 'https://i.ibb.co/ccfsnPW/nalu-screenshot.png',
-      image2: 'https://i.ibb.co/y0fgrmk/Screenshot-2020-09-28-at-14-20-21.png',
-      displacementImage: 'https://i.ibb.co/306vvr1/7.jpg',
+      image1: 'https://i.ibb.co/6cMwRTD/reactathon-screenshot.png',
+      image2: 'https://i.ibb.co/K6qvsp0/tfl-bikes.png',
+      displacementImage: 'https://i.ibb.co/6yGCdRr/4.png',
       speedIn: 1.5,
       speedOut: 1.5,
       imagesRatio: 350 / 400,
@@ -173,7 +173,7 @@ export default function Nalu() {
               <SiNpm className={classes.techIcon} />
               <SiNodeDotJs className={classes.techIcon} />
               <i className="devicon-express-original skills-details-icon"></i>
-              <SiNetlify className={classes.techIcon} />
+              <SiHeroku className={classes.techIcon} />
             </Grid>
           </Grid>
         </div>
