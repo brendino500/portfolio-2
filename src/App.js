@@ -37,7 +37,7 @@ function App() {
             Experience
           </button>
           <br />
-          <button onClick={() => scrollTo(sectionAboutRef)}>Experience</button>
+          <button onClick={() => scrollTo(sectionAboutRef)}>About</button>
         </div>
         <main>
           <div ref={sectionHomeRef} style={{ height: '100vh' }}>
