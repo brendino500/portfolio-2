@@ -1,6 +1,8 @@
 import React from 'react'
 import JungleKobenhavn from './JungleKobenhavn'
 import Apperture from './APPerture'
+import Nalu from './Nalu'
+import WeatherxTfl from './WeatherxTfl'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container } from '@material-ui/core'
@@ -43,6 +45,8 @@ export default function Projects() {
       <div className={classes.projectCards}>
         <JungleKobenhavn />
         <Apperture />
+        <Nalu />
+        <WeatherxTfl />
       </div>
     </Container>
   )

@@ -9,7 +9,7 @@ import {
   CardMedia,
   IconButton,
 } from '@material-ui/core'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
 import GitHubIcon from '@material-ui/icons/GitHub'
 
@@ -98,7 +98,7 @@ export default function JungleKobenhavn() {
       intensity: 0.3,
       image1: 'https://i.ibb.co/9vMV4z7/JK1.png',
       image2: 'https://i.ibb.co/W5C5qPf/JK2.png',
-      displacementImage: 'https://i.ibb.co/jGFsy1r/8.jpg',
+      displacementImage: 'https://i.ibb.co/8N59RH3/14.jpg',
       speedIn: 1.5,
       speedOut: 1.5,
       imagesRatio: 140 / 250,

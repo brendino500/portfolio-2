@@ -12,18 +12,16 @@ import {
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import { DiDjango } from 'react-icons/di'
 import {
   SiJavascript,
   SiCss3,
   SiHtml5,
-  SiPython,
-  SiPostgresql,
-  SiMaterialUi,
+  SiBulma,
   SiSass,
   SiReact,
-  SiHeroku,
+  SiNetlify,
   SiNpm,
+  SiMongodb,
   SiNodeDotJs,
 } from 'react-icons/si'
 
@@ -91,16 +89,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function APPerture() {
+export default function Nalu() {
   const classes = useStyles()
 
   useEffect(() => {
     new hoverEffect({
-      parent: document.querySelector('#apperture-project'),
+      parent: document.querySelector('#nalu'),
       intensity: 0.3,
-      image1: 'https://i.ibb.co/mvYsY2Y/apperture-home.png',
-      image2: 'https://i.ibb.co/SJrrDH5/apperture-screenshot1.png',
-      displacementImage: 'https://i.ibb.co/jGFsy1r/8.jpg',
+      image1: 'https://i.ibb.co/ccfsnPW/nalu-screenshot.png',
+      image2: 'https://i.ibb.co/y0fgrmk/Screenshot-2020-09-28-at-14-20-21.png',
+      displacementImage: 'https://i.ibb.co/306vvr1/7.jpg',
       speedIn: 1.5,
       speedOut: 1.5,
       imagesRatio: 350 / 400,
@@ -111,25 +109,29 @@ export default function APPerture() {
     <Card className={classes.root}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography className={classes.title}>APPerture</Typography>
+          <Typography className={classes.title}>Nalu</Typography>
           <Typography className={classes.subtitle}>
-            Paired Project • 7 Days
+            Group Project • 7 Days
           </Typography>
         </CardContent>
         <div className={classes.text}>
-          <Typography className={classes.text}>Instagram x Unsplash</Typography>
           <Typography className={classes.text}>
-            For this project, we really wanted to{' '}
-            <i>push ourselves with Material UI</i> (we definitely had to prove
-            our styling was better than in our Reactathon project... lol!) and{' '}
-            <i>learning Material UI was such a rewarding experience.</i> We also
-            implemented some <i>sexy parallax.</i>
-          </Typography>
-          <br />
-          <Typography className={classes.text}>
-            We made our own Python Django API using REST Framework and Postgres
-            Database. Users can register, sign in, create a profile, follow
-            other users and upload their own photos.
+            'Nalu' is a <i>social website</i> for the surfing community. Users
+            can add a surf location as well as rate and comment on other users
+            surf locations. For each surf spot, we{' '}
+            <i>pulled from two weather APIs</i>- one for the local weather and
+            one for the marine weather.
+            <br />
+            <br />
+            This was the first project{' '}
+            <i>
+              collaborating with three other developers and simultaneously using
+              Git.{' '}
+            </i>
+            It was also a{' '}
+            <i>HUGE learning curve debugging other developers code.</i> That was
+            incredibly difficult at first, but it was the best lesson I took
+            from the whole project.
           </Typography>
         </div>
         <div>
@@ -140,7 +142,7 @@ export default function APPerture() {
           >
             <Grid>
               <IconButton
-                href="https://github.com/brendino500/APPerture"
+                href="https://github.com/brendino500/nalu"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -150,7 +152,7 @@ export default function APPerture() {
                 />
               </IconButton>
               <IconButton
-                href="http://apperture-project.herokuapp.com/"
+                href="https://naluwave.herokuapp.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -165,28 +167,23 @@ export default function APPerture() {
               <SiHtml5 className={classes.techIcon} />
               <SiCss3 className={classes.techIcon} />
               <SiSass className={classes.techIcon} />
-              <SiMaterialUi className={classes.techIcon} />
+              <SiBulma className={classes.techIcon} />
               <SiReact className={classes.techIcon} />
-              <SiPython className={classes.techIcon} />
-              <DiDjango className={classes.techIcon} />
-              <SiPostgresql className={classes.techIcon} />
+              <SiMongodb className={classes.techIcon} />
               <SiNpm className={classes.techIcon} />
               <SiNodeDotJs className={classes.techIcon} />
-              <SiHeroku className={classes.techIcon} />
+              <i className="devicon-express-original skills-details-icon"></i>
+              <SiNetlify className={classes.techIcon} />
             </Grid>
           </Grid>
         </div>
       </div>
       <a
-        href="http://apperture-project.herokuapp.com/"
+        href="https://naluwave.herokuapp.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <CardMedia
-          className={classes.image}
-          id="apperture-project"
-          alt="apperture-project"
-        />
+        <CardMedia className={classes.image} id="nalu" alt="nalu" />
       </a>
     </Card>
   )
