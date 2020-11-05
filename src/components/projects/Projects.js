@@ -3,6 +3,7 @@ import JungleKobenhavn from './JungleKobenhavn'
 import Apperture from './APPerture'
 import Nalu from './Nalu'
 import WeatherxTfl from './WeatherxTfl'
+import Tetris from './Tetris'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container } from '@material-ui/core'
@@ -14,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
   },
   projectCards: {
     marginTop: '5%',
+  },
+  projects: {
+    margin: 10,
   },
   title: {
     flexGrow: 1,
@@ -43,10 +47,21 @@ export default function Projects() {
         PROJECTS
       </Typography>
       <div className={classes.projectCards}>
-        <JungleKobenhavn />
-        <Apperture />
-        <Nalu />
-        <WeatherxTfl />
+        <div className={classes.projects}>
+          <JungleKobenhavn />
+        </div>
+        <div className={classes.projects}>
+          <Apperture />
+        </div>
+        <div className={classes.projects}>
+          <Nalu />
+        </div>
+        <div className={classes.projects}>
+          <WeatherxTfl />
+        </div>
+        <div className={classes.projects}>
+          <Tetris />
+        </div>
       </div>
     </Container>
   )
