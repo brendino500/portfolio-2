@@ -5,10 +5,9 @@ import CraftLondon from './CraftLondon'
 import ManchesterUni from './ManchesterUni'
 
 import { HiOutlineCode } from 'react-icons/hi'
-import { GiPhotoCamera, GiCoffeeBeans } from 'react-icons/gi'
+import { GiPhotoCamera } from 'react-icons/gi'
 import { IoIosMusicalNotes } from 'react-icons/io'
 import { BiCoffee } from 'react-icons/bi'
-import { FaCameraRetro } from 'react-icons/fa'
 
 import { makeStyles } from '@material-ui/core/styles'
 import {
