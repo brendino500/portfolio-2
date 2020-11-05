@@ -8,6 +8,10 @@ import { Typography, Container } from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: '85%',
+  },
+  projectCards: {
+    marginTop: '5%',
   },
   title: {
     flexGrow: 1,
@@ -36,8 +40,10 @@ export default function Projects() {
       <Typography varient="h1" className={classes.title}>
         PROJECTS
       </Typography>
-      <JungleKobenhavn />
-      <Apperture />
+      <div className={classes.projectCards}>
+        <JungleKobenhavn />
+        <Apperture />
+      </div>
     </Container>
   )
 }
