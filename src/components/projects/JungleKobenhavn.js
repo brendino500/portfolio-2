@@ -183,17 +183,3 @@ export default function JungleKobenhavn() {
     </Card>
   )
 }
-
-// ;<div>
-//   <a
-//     href="http://jungle-kobenhavn.herokuapp.com/"
-//     target="_blank"
-//     rel="noopener noreferrer"
-//   >
-//     <CardMedia
-//       className={classes.image}
-//       id="jungle-kobenhavn"
-//       alt="jungle kobenhavn"
-//     />
-//   </a>
-// </div>
