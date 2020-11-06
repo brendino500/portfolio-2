@@ -1,0 +1,14 @@
+#home-height,
+#skills-height,
+#experience-height,
+#about-height,
+#stalk-height {
+  height: 100vh;
+}
+
+#home-height,
+#skills-height {
+  @media only screen and (max-width: 600px) {
+    height: 450px;
+  }
+}

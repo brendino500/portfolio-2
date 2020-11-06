@@ -242,10 +242,10 @@ function App() {
         </div>
 
         <main>
-          <div ref={sectionHomeRef} style={{ height: '100vh' }}>
+          <div ref={sectionHomeRef} id="home-height">
             <Route exact path="/" component={Home} />
           </div>
-          <div ref={sectionSkillsRef} style={{ height: '110vh' }}>
+          <div ref={sectionSkillsRef} id="skills-height">
             <Skills />
           </div>
           <div ref={sectionProjectsRef} style={{ height: '300vh' }}>

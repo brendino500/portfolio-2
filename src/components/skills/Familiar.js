@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.between('xs', 'sm')]: {
       fontSize: 20,
       textAlign: 'center',
+      // marginTop: '2vh',
     },
     [theme.breakpoints.between('sm', 'md')]: {
       fontSize: 24,

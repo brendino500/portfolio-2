@@ -7,6 +7,9 @@ import { Container, Typography, Grid } from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: '15%',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      marginTop: '55%',
+    },
   },
   title: {
     flexGrow: 1,
@@ -14,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     fontSize: 45,
     letterSpacing: 2,
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 30,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      fontSize: 20,
     },
   },
 }))
