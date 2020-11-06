@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from './components/common/Home'
@@ -9,7 +9,16 @@ import About from './components/common/About'
 import Stalk from './components/common/Stalk'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { AppBar, Toolbar, Typography, Button } from '@material-ui/core/'
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  MenuItem,
+  Menu,
+  IconButton,
+} from '@material-ui/core/'
+import MenuIcon from '@material-ui/icons/Menu'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +42,26 @@ const useStyles = makeStyles((theme) => ({
   buttonGroup: {
     marginRight: 0,
   },
+  sectionDesktop: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+    },
+  },
+  sectionMobile: {
+    display: 'flex',
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
+  mobileMenu: {
+    Paper: {
+      backgroundColor: '#d3c9c0',
+    },
+  },
+  burgerIcon: {
+    color: '#d3c9c0',
+  },
 }))
 
 function App() {
@@ -43,6 +72,24 @@ function App() {
   const sectionExperienceRef = useRef(null)
   const sectionAboutRef = useRef(null)
   const sectionStalkRef = useRef(null)
+  const [anchorEl, setAnchorEl] = useState(null)
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
+
+  const isMenuOpen = Boolean(anchorEl)
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
+
+  const handleMobileMenuClose = () => {
+    setMobileMoreAnchorEl(null)
+  }
+
+  const handleMenuClose = () => {
+    setAnchorEl(null)
+    handleMobileMenuClose()
+  }
+
+  const handleMobileMenuOpen = (e) => {
+    setMobileMoreAnchorEl(e.currentTarget)
+  }
 
   const scrollTo = (ref) => {
     window.scroll({
@@ -50,6 +97,77 @@ function App() {
       behavior: 'smooth',
     })
   }
+
+  const menuId = 'primary-menu'
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    ></Menu>
+  )
+
+  const mobileMenuId = 'primary-menu-mobile'
+  const renderMobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={mobileMenuId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose}
+    >
+      <MenuItem>
+        <p
+          className={classes.button}
+          onClick={() => {
+            handleMobileMenuClose()
+            scrollTo(sectionProjectsRef)
+          }}
+        >
+          PROJECTS
+        </p>
+      </MenuItem>
+      <MenuItem>
+        <p
+          className={classes.button}
+          onClick={() => {
+            handleMobileMenuClose()
+            scrollTo(sectionExperienceRef)
+          }}
+        >
+          EXPERIENCE
+        </p>
+      </MenuItem>
+      <MenuItem>
+        <p
+          className={classes.button}
+          onClick={() => {
+            handleMobileMenuClose()
+            scrollTo(sectionAboutRef)
+          }}
+        >
+          ABOUT
+        </p>
+      </MenuItem>
+      <MenuItem>
+        <p
+          className={classes.button}
+          onClick={() => {
+            handleMobileMenuClose()
+            scrollTo(sectionStalkRef)
+          }}
+        >
+          CONTACT
+        </p>
+      </MenuItem>
+    </Menu>
+  )
 
   return (
     <>
@@ -72,56 +190,57 @@ function App() {
                 </Button>
               </Typography>
 
-              <Button
-                className={classes.button}
-                onClick={() => scrollTo(sectionSkillsRef)}
-              >
-                Skills
-              </Button>
-              <Button
-                className={classes.button}
-                onClick={() => scrollTo(sectionProjectsRef)}
-              >
-                Projects
-              </Button>
+              <div className={classes.sectionDesktop}>
+                <Button
+                  className={classes.button}
+                  onClick={() => scrollTo(sectionSkillsRef)}
+                >
+                  Skills
+                </Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => scrollTo(sectionProjectsRef)}
+                >
+                  Projects
+                </Button>
 
-              <Button
-                className={classes.button}
-                onClick={() => scrollTo(sectionExperienceRef)}
-              >
-                Experience
-              </Button>
-              <Button
-                className={classes.button}
-                onClick={() => scrollTo(sectionAboutRef)}
-              >
-                About
-              </Button>
-              <Button
-                className={classes.button}
-                onClick={() => scrollTo(sectionStalkRef)}
-              >
-                Contact
-              </Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => scrollTo(sectionExperienceRef)}
+                >
+                  Experience
+                </Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => scrollTo(sectionAboutRef)}
+                >
+                  About
+                </Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => scrollTo(sectionStalkRef)}
+                >
+                  Contact
+                </Button>
+              </div>
+
+              <div className={classes.sectionMobile}>
+                <IconButton
+                  aria-label="show more"
+                  aria-controls={mobileMenuId}
+                  aria-haspopup="true"
+                  onClick={handleMobileMenuOpen}
+                  color="inherit"
+                >
+                  <MenuIcon className={classes.burgerIcon} />
+                </IconButton>
+              </div>
             </Toolbar>
+            {renderMobileMenu}
+            {renderMenu}
           </AppBar>
         </div>
 
-        {/* <div style={{ position: 'fixed', top: '16px', left: '16px' }}>
-          <button onClick={() => scrollTo(sectionHomeRef)}>Brenda Ty</button>
-          <br />
-          <button onClick={() => scrollTo(sectionSkillsRef)}>Skills</button>
-          <br />
-          <button onClick={() => scrollTo(sectionProjectsRef)}>Projects</button>
-          <br />
-          <button onClick={() => scrollTo(sectionExperienceRef)}>
-            Experience
-          </button>
-          <br />
-          <button onClick={() => scrollTo(sectionAboutRef)}>About</button>
-          <br />
-          <button onClick={() => scrollTo(sectionStalkRef)}>Stalk</button>
-        </div> */}
         <main>
           <div ref={sectionHomeRef} style={{ height: '100vh' }}>
             <Route exact path="/" component={Home} />
