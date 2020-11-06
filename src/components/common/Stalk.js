@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 
 import EmailIcon from '@material-ui/icons/Email'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
@@ -81,6 +82,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '5%',
     },
   },
+  footer: {
+    bottom: 0,
+  },
 }))
 
 export default function Stalk() {
@@ -150,6 +154,9 @@ export default function Stalk() {
           </Typography>
         </Grid>
       </Grid>
+      <div className={classes.footer}>
+        <Footer />
+      </div>
     </Container>
   )
 }
