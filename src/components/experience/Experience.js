@@ -4,6 +4,7 @@ import FreelancePhotographer from './FreelancePhotographer'
 import CraftLondon from './CraftLondon'
 import ManchesterUni from './ManchesterUni'
 
+import Fade from 'react-reveal/Fade'
 import { HiOutlineCode } from 'react-icons/hi'
 import { GiPhotoCamera } from 'react-icons/gi'
 import { IoIosMusicalNotes } from 'react-icons/io'
@@ -61,69 +62,71 @@ export default function SimpleAccordion() {
     <>
       <Typography className={classes.title}>EXPERIENCE</Typography>
       <div className={classes.root}>
-        <Accordion className={classes.accordion}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel13a-content"
-            id="panel3a-header"
-          >
-            <Typography className={classes.heading}>
-              <HiOutlineCode className="experience-icon" />
-              Coding
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <GeneralAssembly />
-          </AccordionDetails>
-        </Accordion>
+        <Fade bottom>
+          <Accordion className={classes.accordion}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel13a-content"
+              id="panel3a-header"
+            >
+              <Typography className={classes.heading}>
+                <HiOutlineCode className="experience-icon" />
+                Coding
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <GeneralAssembly />
+            </AccordionDetails>
+          </Accordion>
 
-        <Accordion className={classes.accordion}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={classes.heading}>
-              <GiPhotoCamera className="experience-icon" />
-              Photography
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <FreelancePhotographer />
-          </AccordionDetails>
-        </Accordion>
+          <Accordion className={classes.accordion}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>
+                <GiPhotoCamera className="experience-icon" />
+                Photography
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <FreelancePhotographer />
+            </AccordionDetails>
+          </Accordion>
 
-        <Accordion className={classes.accordion}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2a-content"
-            id="panel2a-header"
-          >
-            <Typography className={classes.heading}>
-              <BiCoffee className="experience-icon" />
-              Coffee
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <CraftLondon />
-          </AccordionDetails>
-        </Accordion>
+          <Accordion className={classes.accordion}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography className={classes.heading}>
+                <BiCoffee className="experience-icon" />
+                Coffee
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <CraftLondon />
+            </AccordionDetails>
+          </Accordion>
 
-        <Accordion className={classes.accordion}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel14a-content"
-            id="panel4a-header"
-          >
-            <Typography className={classes.heading}>
-              <IoIosMusicalNotes className="experience-icon" />
-              Music
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <ManchesterUni />
-          </AccordionDetails>
-        </Accordion>
+          <Accordion className={classes.accordion}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel14a-content"
+              id="panel4a-header"
+            >
+              <Typography className={classes.heading}>
+                <IoIosMusicalNotes className="experience-icon" />
+                Music
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <ManchesterUni />
+            </AccordionDetails>
+          </Accordion>
+        </Fade>
       </div>
     </>
   )

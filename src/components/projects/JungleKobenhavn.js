@@ -23,6 +23,7 @@ import {
   SiTypescript,
   SiReact,
   SiHeroku,
+  SiNpm,
 } from 'react-icons/si'
 
 const useStyles = makeStyles((theme) => ({
@@ -164,6 +165,7 @@ export default function JungleKobenhavn() {
               <SiCss3 className={classes.techIcon} />
               <SiMongodb className={classes.techIcon} />
               <SiNodeDotJs className={classes.techIcon} />
+              <SiNpm className={classes.techIcon} />
               <i className="devicon-express-original skills-details-icon"></i>
               <SiHeroku className={classes.techIcon} />
             </Grid>

@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Neuton',
     color: '#d3c9c0',
     fontSize: 15,
-
     letterSpacing: 2,
     [theme.breakpoints.between('xs', 'sm')]: {
       fontSize: 10,
@@ -26,9 +25,11 @@ export default function Footer() {
   const classes = useStyles()
 
   return (
-    <Typography className={classes.footer}>
-      I made this website all by myself using: React-Spring, Robin Dela's Hover
-      Effect, React Hooks and Material UI.
-    </Typography>
+    <div>
+      <Typography className={classes.footer}>
+        I made this website all by myself using: Robin Dela's Hover Effect,
+        React Hooks and Material UI.
+      </Typography>
+    </div>
   )
 }

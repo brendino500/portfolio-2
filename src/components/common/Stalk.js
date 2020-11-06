@@ -83,7 +83,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footer: {
-    bottom: 0,
+    position: 'absolute',
+    bottom: 10,
   },
 }))
 
@@ -154,9 +155,6 @@ export default function Stalk() {
           </Typography>
         </Grid>
       </Grid>
-      <div className={classes.footer}>
-        <Footer />
-      </div>
     </Container>
   )
 }

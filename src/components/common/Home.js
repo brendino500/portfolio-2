@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container, Typography, Grid } from '@material-ui/core'
 
@@ -25,11 +26,13 @@ export default function Home() {
   return (
     <Container maxWidth="lg" className={classes.root}>
       <Grid container direction="column" alignItems="flex-start">
-        <Typography className={classes.title}>Hey, I'm Brenda.</Typography>
-        <br />
-        <Typography className={classes.title}>
-          Fullstack developer • Plant hoarder
-        </Typography>
+        <Fade>
+          <Typography className={classes.title}>Hey, I'm Brenda.</Typography>
+          <br />
+          <Typography className={classes.title}>
+            Fullstack developer • Plant hoarder
+          </Typography>
+        </Fade>
       </Grid>
     </Container>
   )
