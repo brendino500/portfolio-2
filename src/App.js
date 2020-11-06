@@ -248,7 +248,7 @@ function App() {
           <div ref={sectionSkillsRef} id="skills-height">
             <Skills />
           </div>
-          <div ref={sectionProjectsRef} style={{ height: '300vh' }}>
+          <div ref={sectionProjectsRef} id="project-height">
             <Projects />
           </div>
           <div ref={sectionExperienceRef} style={{ height: '100vh' }}>

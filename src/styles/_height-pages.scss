@@ -6,9 +6,20 @@
   height: 100vh;
 }
 
-#home-height,
-#skills-height {
+#home-height {
   @media only screen and (max-width: 600px) {
     height: 450px;
+  }
+}
+
+#skills-height {
+  @media only screen and (max-width: 600px) {
+    height: 350px;
+  }
+}
+
+#project-height {
+  @media only screen and (max-width: 600px) {
+    margin-top: 400px;
   }
 }
