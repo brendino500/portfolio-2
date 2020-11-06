@@ -7,6 +7,7 @@ import Skills from './components/skills/Skills'
 import Projects from './components/projects/Projects'
 import Experience from './components/experience/Experience'
 import About from './components/common/About'
+import Stalk from './components/common/Stalk'
 
 function App() {
   const sectionHomeRef = useRef(null)
@@ -14,6 +15,7 @@ function App() {
   const sectionProjectsRef = useRef(null)
   const sectionExperienceRef = useRef(null)
   const sectionAboutRef = useRef(null)
+  const sectionStalkRef = useRef(null)
 
   const scrollTo = (ref) => {
     window.scroll({
@@ -38,6 +40,8 @@ function App() {
           </button>
           <br />
           <button onClick={() => scrollTo(sectionAboutRef)}>About</button>
+          <br />
+          <button onClick={() => scrollTo(sectionStalkRef)}>Stalk</button>
         </div>
         <main>
           <div ref={sectionHomeRef} style={{ height: '100vh' }}>
@@ -54,6 +58,9 @@ function App() {
           </div>
           <div ref={sectionAboutRef} style={{ height: '100vh' }}>
             <About />
+          </div>
+          <div ref={sectionStalkRef} style={{ height: '100vh' }}>
+            <Stalk />
           </div>
         </main>
       </BrowserRouter>
