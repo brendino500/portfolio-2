@@ -81,8 +81,21 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footer: {
-    position: 'absolute',
-    bottom: 10,
+    marginTop: '20%',
+    fontFamily: 'Neuton',
+    color: '#d3c9c0',
+    fontSize: 15,
+    letterSpacing: 2,
+    verticalAlign: 'text-bottom',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      fontSize: 10,
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      fontSize: 10,
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      fontSize: 15,
+    },
   },
 }))
 
@@ -158,6 +171,13 @@ export default function Stalk() {
             </Typography>
           </Grid>
         </Grid>
+      </Fade>
+
+      <Fade bottom cascade>
+        <Typography className={classes.footer}>
+          I made this website all by myself using: Robin Dela's Hover Effect,
+          React Hooks and Material UI.
+        </Typography>
       </Fade>
     </Container>
   )

@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     fontSize: 15,
     letterSpacing: 2,
+    verticalAlign: 'text-bottom',
     [theme.breakpoints.between('xs', 'sm')]: {
       fontSize: 10,
     },
