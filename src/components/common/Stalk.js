@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from './Footer'
 
 import Fade from 'react-reveal/Fade'
 import EmailIcon from '@material-ui/icons/Email'
