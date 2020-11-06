@@ -5,7 +5,7 @@ import Beginner from './Beginner'
 
 import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Container } from '@material-ui/core'
+import { Typography, Container, Divider } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
