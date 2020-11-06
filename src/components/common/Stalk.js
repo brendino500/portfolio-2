@@ -9,9 +9,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Container, Typography, IconButton, Grid } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
   container: {
     maxWidth: 1000,
   },
@@ -95,6 +92,10 @@ export default function Stalk() {
   return (
     <Container className={classes.container}>
       <Typography className={classes.subtitle}>
+        <br />
+        <br />
+        <br />
+
         <s>STALK ME...</s>
       </Typography>
       <Typography className={classes.title}>CONTACT</Typography>

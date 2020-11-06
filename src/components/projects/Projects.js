@@ -45,6 +45,7 @@ export default function Projects() {
   return (
     <Container className={classes.root}>
       <Typography varient="h1" className={classes.title}>
+        <br />
         PROJECTS
       </Typography>
       <div className={classes.projectCards}>

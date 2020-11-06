@@ -112,7 +112,10 @@ export default function About() {
 
   return (
     <Container maxWidth="lg">
-      <Typography className={classes.title}>WHO AM I?</Typography>
+      <Typography className={classes.title}>
+        <br />
+        WHO AM I?
+      </Typography>
       <br />
       <Fade bottom cascade>
         <div className={classes.content}>

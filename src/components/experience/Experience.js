@@ -60,7 +60,10 @@ export default function SimpleAccordion() {
 
   return (
     <>
-      <Typography className={classes.title}>EXPERIENCE</Typography>
+      <Typography className={classes.title}>
+        <br />
+        EXPERIENCE
+      </Typography>
       <div className={classes.root}>
         <Fade bottom>
           <Accordion className={classes.accordion}>

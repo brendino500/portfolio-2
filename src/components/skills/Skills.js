@@ -35,7 +35,10 @@ export default function Skills() {
 
   return (
     <Container className={classes.root}>
-      <Typography className={classes.title}>SKILLS</Typography>
+      <Typography className={classes.title}>
+        <br />
+        SKILLS
+      </Typography>
       <Fade bottom>
         <Confident />
         <Familiar />
