@@ -5,6 +5,7 @@ import Nalu from './Nalu'
 import WeatherxTfl from './WeatherxTfl'
 import Tetris from './Tetris'
 
+import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container } from '@material-ui/core'
 
@@ -47,21 +48,23 @@ export default function Projects() {
         PROJECTS
       </Typography>
       <div className={classes.projectCards}>
-        <div className={classes.projects}>
-          <JungleKobenhavn />
-        </div>
-        <div className={classes.projects}>
-          <Apperture />
-        </div>
-        <div className={classes.projects}>
-          <Nalu />
-        </div>
-        <div className={classes.projects}>
-          <WeatherxTfl />
-        </div>
-        <div className={classes.projects}>
-          <Tetris />
-        </div>
+        <Fade>
+          <div className={classes.projects}>
+            <JungleKobenhavn />
+          </div>
+          <div className={classes.projects}>
+            <Apperture />
+          </div>
+          <div className={classes.projects}>
+            <Nalu />
+          </div>
+          <div className={classes.projects}>
+            <WeatherxTfl />
+          </div>
+          <div className={classes.projects}>
+            <Tetris />
+          </div>
+        </Fade>
       </div>
     </Container>
   )

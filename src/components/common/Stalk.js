@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 
+import Fade from 'react-reveal/Fade'
 import EmailIcon from '@material-ui/icons/Email'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
@@ -97,64 +98,66 @@ export default function Stalk() {
         <s>STALK ME...</s>
       </Typography>
       <Typography className={classes.title}>CONTACT</Typography>
-      <Grid
-        container
-        direction="column"
-        justify="space-evenly"
-        alignItems="flex-start"
-        className={classes.grid}
-      >
+      <Fade bottom cascade>
         <Grid
           container
-          direction="row"
-          justify="flex-start"
-          alignItems="center"
+          direction="column"
+          justify="space-evenly"
+          alignItems="flex-start"
+          className={classes.grid}
         >
-          <IconButton
-            href="mailto:brenda.ty@live.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
           >
-            <EmailIcon fontSize="large" className={classes.icon} />
-          </IconButton>
-          <Typography className={classes.text}>brenda.ty@live.com</Typography>
-        </Grid>
+            <IconButton
+              href="mailto:brenda.ty@live.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <EmailIcon fontSize="large" className={classes.icon} />
+            </IconButton>
+            <Typography className={classes.text}>brenda.ty@live.com</Typography>
+          </Grid>
 
-        <Grid
-          container
-          direction="row"
-          justify="flex-start"
-          alignItems="center"
-        >
-          <IconButton
-            href="https://github.com/brendino500"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
           >
-            <GitHubIcon fontSize="large" className={classes.icon} />
-          </IconButton>
-          <Typography className={classes.text}>
-            github.com/brendino500
-          </Typography>
-        </Grid>
-        <Grid
-          container
-          direction="row"
-          justify="flex-start"
-          alignItems="center"
-        >
-          <IconButton
-            href="https://www.linkedin.com/in/brendaty/"
-            target="_blank"
-            rel="noopener noreferrer"
+            <IconButton
+              href="https://github.com/brendino500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon fontSize="large" className={classes.icon} />
+            </IconButton>
+            <Typography className={classes.text}>
+              github.com/brendino500
+            </Typography>
+          </Grid>
+          <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
           >
-            <LinkedInIcon fontSize="large" className={classes.icon} />
-          </IconButton>
-          <Typography className={classes.text}>
-            linkedin.com/in/brendaty
-          </Typography>
+            <IconButton
+              href="https://www.linkedin.com/in/brendaty/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon fontSize="large" className={classes.icon} />
+            </IconButton>
+            <Typography className={classes.text}>
+              linkedin.com/in/brendaty
+            </Typography>
+          </Grid>
         </Grid>
-      </Grid>
+      </Fade>
     </Container>
   )
 }
