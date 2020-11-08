@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import GeneralAssembly from './GeneralAssembly'
 import FreelancePhotographer from './FreelancePhotographer'
 import CraftLondon from './CraftLondon'
@@ -49,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 5,
     color: '#d3c9c0',
     textAlign: 'center',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      fontSize: 25,
+    },
   },
   accordion: {
     backgroundColor: '#323e47',
@@ -57,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleAccordion() {
   const classes = useStyles()
+  const [expanded, setExpanded] = React.useState(false)
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false)
+  }
 
   return (
     <>
@@ -66,27 +74,36 @@ export default function SimpleAccordion() {
       </Typography>
       <div className={classes.root}>
         <Fade bottom>
-          <Accordion className={classes.accordion}>
+          <Accordion
+            className={classes.accordion}
+            expanded={expanded === 'panel1'}
+            onChange={handleChange('panel1')}
+          >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel13a-content"
-              id="panel3a-header"
+              aria-controls="panel1bh-content"
+              id="panel1bh-header"
             >
               <Typography className={classes.heading}>
                 <HiOutlineCode className="experience-icon" />
                 Coding
               </Typography>
             </AccordionSummary>
+
             <AccordionDetails>
               <GeneralAssembly />
             </AccordionDetails>
           </Accordion>
 
-          <Accordion className={classes.accordion}>
+          <Accordion
+            className={classes.accordion}
+            expanded={expanded === 'panel2'}
+            onChange={handleChange('panel2')}
+          >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
+              aria-controls="panel2bh-content"
+              id="panel2bh-header"
             >
               <Typography className={classes.heading}>
                 <GiPhotoCamera className="experience-icon" />
@@ -98,11 +115,15 @@ export default function SimpleAccordion() {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion className={classes.accordion}>
+          <Accordion
+            className={classes.accordion}
+            expanded={expanded === 'panel3'}
+            onChange={handleChange('panel3')}
+          >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2a-content"
-              id="panel2a-header"
+              aria-controls="panel3bh-content"
+              id="panel3bh-header"
             >
               <Typography className={classes.heading}>
                 <BiCoffee className="experience-icon" />
@@ -114,11 +135,15 @@ export default function SimpleAccordion() {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion className={classes.accordion}>
+          <Accordion
+            className={classes.accordion}
+            expanded={expanded === 'panel4'}
+            onChange={handleChange('panel4')}
+          >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel14a-content"
-              id="panel4a-header"
+              aria-controls="panel4bh-content"
+              id="panel4bh-header"
             >
               <Typography className={classes.heading}>
                 <IoIosMusicalNotes className="experience-icon" />

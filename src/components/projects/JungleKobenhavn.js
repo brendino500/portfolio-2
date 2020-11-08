@@ -8,6 +8,7 @@ import {
   CardContent,
   CardMedia,
   IconButton,
+  Hidden,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -88,6 +89,11 @@ const useStyles = makeStyles((theme) => ({
     positon: 'absolute',
     bottom: 0,
   },
+  linksIcons: {
+    [theme.breakpoints.between('xs', 'sm')]: {
+      alignItems: 'center',
+    },
+  },
 }))
 
 export default function JungleKobenhavn() {
@@ -134,7 +140,7 @@ export default function JungleKobenhavn() {
             justify="space-between"
             className={classes.iconLayout}
           >
-            <Grid>
+            <Grid className={classes.linksIcons}>
               <IconButton
                 href="https://github.com/brendino500/junglekobenhavn"
                 target="_blank"
@@ -172,17 +178,32 @@ export default function JungleKobenhavn() {
           </Grid>
         </div>
       </div>
-      <a
-        href="http://jungle-kobenhavn.herokuapp.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <CardMedia
-          className={classes.image}
-          id="jungle-kobenhavn"
-          alt="jungle kobenhavn"
-        />
-      </a>
+      <Hidden smDown>
+        <a
+          href="http://jungle-kobenhavn.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CardMedia
+            className={classes.image}
+            id="jungle-kobenhavn"
+            alt="jungle kobenhavn"
+          />
+        </a>
+      </Hidden>
+      <Hidden smUp>
+        <a
+          href="http://jungle-kobenhavn.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CardMedia
+            className={classes.image}
+            id="jungle-kobenhavn-mobile"
+            alt="jungle kobenhavn"
+          />
+        </a>
+      </Hidden>
     </Card>
   )
 }

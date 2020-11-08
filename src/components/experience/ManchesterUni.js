@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, List, ListItem, Card } from '@material-ui/core'
+import { Typography, Card } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
