@@ -8,6 +8,7 @@ import {
   CardContent,
   CardMedia,
   IconButton,
+  Hidden,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -21,7 +22,6 @@ import {
   SiReact,
   SiNetlify,
   SiNpm,
-  SiMongodb,
   SiNodeDotJs,
 } from 'react-icons/si'
 
@@ -171,17 +171,19 @@ export default function WeatherxTfl() {
           </Grid>
         </div>
       </div>
-      <a
-        href="https://weather-bike-tube.netlify.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <CardMedia
-          className={classes.image}
-          id="weather-tfl"
-          alt="weather-tfl"
-        />
-      </a>
+      <Hidden smDown>
+        <a
+          href="https://weather-bike-tube.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CardMedia
+            className={classes.image}
+            id="weather-tfl"
+            alt="weather-tfl"
+          />
+        </a>
+      </Hidden>
     </Card>
   )
 }

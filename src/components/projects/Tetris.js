@@ -8,6 +8,7 @@ import {
   CardContent,
   CardMedia,
   IconButton,
+  Hidden,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -155,13 +156,15 @@ export default function Tetris() {
           </Grid>
         </div>
       </div>
-      <a
-        href="https://brendino500.github.io/sei-project-1/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <CardMedia className={classes.image} id="tetris" alt="tetris" />
-      </a>
+      <Hidden smDown>
+        <a
+          href="https://brendino500.github.io/sei-project-1/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CardMedia className={classes.image} id="tetris" alt="tetris" />
+        </a>
+      </Hidden>
     </Card>
   )
 }

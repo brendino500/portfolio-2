@@ -8,6 +8,7 @@ import {
   CardContent,
   CardMedia,
   IconButton,
+  Hidden,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -177,17 +178,19 @@ export default function APPerture() {
           </Grid>
         </div>
       </div>
-      <a
-        href="http://apperture-project.herokuapp.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <CardMedia
-          className={classes.image}
-          id="apperture-project"
-          alt="apperture-project"
-        />
-      </a>
+      <Hidden smDown>
+        <a
+          href="http://apperture-project.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CardMedia
+            className={classes.image}
+            id="apperture-project"
+            alt="apperture-project"
+          />
+        </a>
+      </Hidden>
     </Card>
   )
 }

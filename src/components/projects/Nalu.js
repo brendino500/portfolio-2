@@ -8,6 +8,7 @@ import {
   CardContent,
   CardMedia,
   IconButton,
+  Hidden,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -178,13 +179,15 @@ export default function Nalu() {
           </Grid>
         </div>
       </div>
-      <a
-        href="https://naluwave.herokuapp.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <CardMedia className={classes.image} id="nalu" alt="nalu" />
-      </a>
+      <Hidden smDown>
+        <a
+          href="https://naluwave.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CardMedia className={classes.image} id="nalu" alt="nalu" />
+        </a>
+      </Hidden>
     </Card>
   )
 }

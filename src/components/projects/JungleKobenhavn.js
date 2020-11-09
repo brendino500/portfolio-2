@@ -94,6 +94,11 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
     },
   },
+  mobileImage: {
+    flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+  },
 }))
 
 export default function JungleKobenhavn() {
@@ -179,31 +184,35 @@ export default function JungleKobenhavn() {
         </div>
       </div>
       <Hidden smDown>
-        <a
-          href="http://jungle-kobenhavn.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardMedia
-            className={classes.image}
-            id="jungle-kobenhavn"
-            alt="jungle kobenhavn"
-          />
-        </a>
+        <div>
+          <a
+            href="http://jungle-kobenhavn.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CardMedia
+              className={classes.image}
+              id="jungle-kobenhavn"
+              alt="jungle kobenhavn"
+            />
+          </a>
+        </div>
       </Hidden>
-      <Hidden smUp>
-        <a
-          href="http://jungle-kobenhavn.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardMedia
-            className={classes.image}
-            id="jungle-kobenhavn-mobile"
-            alt="jungle kobenhavn"
-          />
-        </a>
-      </Hidden>
+      <div>
+        {/* <Hidden smUp>
+          <a
+            href="http://jungle-kobenhavn.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CardMedia
+              className={classes.mobileImage}
+              id="jungle-kobenhavn-mobile"
+              alt="jungle kobenhavn"
+            />
+          </a>
+        </Hidden> */}
+      </div>
     </Card>
   )
 }
