@@ -1,3 +1,11 @@
 .profile-image {
   height: 50vh;
 }
+
+.profile-image {
+  @media only screen and (max-width: 600px) {
+    height: 40vh;
+    margin-left: 15%;
+    margin-top: 5%;
+  }
+}

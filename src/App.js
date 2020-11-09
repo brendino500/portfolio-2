@@ -251,13 +251,13 @@ function App() {
           <div ref={sectionProjectsRef} id="project-height">
             <Projects />
           </div>
-          <div ref={sectionExperienceRef} style={{ height: '110vh' }}>
+          <div ref={sectionExperienceRef} id="experience-height">
             <Experience />
           </div>
-          <div ref={sectionAboutRef} style={{ height: '100vh' }}>
+          <div ref={sectionAboutRef} id="about-height">
             <About />
           </div>
-          <div ref={sectionStalkRef} style={{ height: '100vh' }}>
+          <div ref={sectionStalkRef} id="stalk-height">
             <Stalk />
           </div>
         </main>

@@ -2,7 +2,14 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { Container, Typography, Grid, List, ListItem } from '@material-ui/core'
+import {
+  Container,
+  Typography,
+  Grid,
+  List,
+  ListItem,
+  Hidden,
+} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -99,6 +106,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     margin: '7%',
   },
+  imageMobile: {
+    flexGrow: 1,
+    display: 'flex',
+    justify: 'center',
+    alignItems: 'center',
+  },
   textContent: {
     flexGrow: 3,
   },
@@ -119,13 +132,15 @@ export default function About() {
       <br />
       <Fade bottom cascade>
         <div className={classes.content}>
-          <div className={classes.image}>
-            <img
-              src="https://i.ibb.co/415wtzS/photo-for-website.jpg"
-              alt="profile"
-              className="profile-image"
-            />
-          </div>
+          <Hidden smDown>
+            <div className={classes.image}>
+              <img
+                src="https://i.ibb.co/415wtzS/photo-for-website.jpg"
+                alt="profile"
+                className="profile-image"
+              />
+            </div>
+          </Hidden>
           <div className={classes.textContent}>
             <Typography className={classes.subtitle}>
               Hey, I'm Brenda Ty, a frontend developer living in London.
@@ -162,6 +177,15 @@ export default function About() {
             </Grid>
           </div>
         </div>
+        <Hidden smUp>
+          <div className={classes.imageMobile}>
+            <img
+              src="https://i.ibb.co/415wtzS/photo-for-website.jpg"
+              alt="profile"
+              className="profile-image"
+            />
+          </div>
+        </Hidden>
       </Fade>
     </Container>
   )
