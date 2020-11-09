@@ -91,7 +91,7 @@ export default function Tetris() {
       displacementImage: 'https://i.ibb.co/8YhT8P9/6.jpg',
       speedIn: 1.5,
       speedOut: 1.5,
-      imagesRatio: 350 / 400,
+      imagesRatio: 320 / 400,
     })
   }, [])
 
@@ -156,15 +156,14 @@ export default function Tetris() {
           </Grid>
         </div>
       </div>
-      <Hidden smDown>
-        <a
-          href="https://brendino500.github.io/sei-project-1/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardMedia className={classes.image} id="tetris" alt="tetris" />
-        </a>
-      </Hidden>
+
+      <a
+        href="https://brendino500.github.io/sei-project-1/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <CardMedia className={classes.image} id="tetris" alt="tetris" />
+      </a>
     </Card>
   )
 }

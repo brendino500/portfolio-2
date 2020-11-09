@@ -104,7 +104,7 @@ export default function APPerture() {
       displacementImage: 'https://i.ibb.co/jGFsy1r/8.jpg',
       speedIn: 1.5,
       speedOut: 1.5,
-      imagesRatio: 350 / 400,
+      imagesRatio: 320 / 400,
     })
   }, [])
 
@@ -178,19 +178,18 @@ export default function APPerture() {
           </Grid>
         </div>
       </div>
-      <Hidden smDown>
-        <a
-          href="http://apperture-project.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardMedia
-            className={classes.image}
-            id="apperture-project"
-            alt="apperture-project"
-          />
-        </a>
-      </Hidden>
+
+      <a
+        href="http://apperture-project.herokuapp.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <CardMedia
+          className={classes.image}
+          id="apperture-project"
+          alt="apperture-project"
+        />
+      </a>
     </Card>
   )
 }

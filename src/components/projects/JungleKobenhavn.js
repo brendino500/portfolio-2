@@ -99,6 +99,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
   },
+  image: {
+    height: 400,
+  },
 }))
 
 export default function JungleKobenhavn() {
@@ -113,7 +116,7 @@ export default function JungleKobenhavn() {
       displacementImage: 'https://i.ibb.co/8N59RH3/14.jpg',
       speedIn: 1.5,
       speedOut: 1.5,
-      imagesRatio: 140 / 250,
+      imagesRatio: 200 / 400,
     })
   }, [])
 
@@ -183,21 +186,20 @@ export default function JungleKobenhavn() {
           </Grid>
         </div>
       </div>
-      <Hidden smDown>
-        <div>
-          <a
-            href="http://jungle-kobenhavn.herokuapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <CardMedia
-              className={classes.image}
-              id="jungle-kobenhavn"
-              alt="jungle kobenhavn"
-            />
-          </a>
-        </div>
-      </Hidden>
+
+      <div>
+        <a
+          href="http://jungle-kobenhavn.herokuapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CardMedia
+            className={classes.image}
+            id="jungle-kobenhavn"
+            alt="jungle kobenhavn"
+          />
+        </a>
+      </div>
       <div>
         {/* <Hidden smUp>
           <a

@@ -8,8 +8,12 @@
   object-fit: contain;
 }
 
-#jungle-kobenhavn-mobile {
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
+#jungle-kobenhavn,
+#apperture-project,
+#nalu,
+#weather-tfl,
+#tetris {
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 }
