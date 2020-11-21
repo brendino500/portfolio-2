@@ -4,6 +4,7 @@ import Apperture from './APPerture'
 import Nalu from './Nalu'
 import WeatherxTfl from './WeatherxTfl'
 import Tetris from './Tetris'
+import Aventyr from './Aventyr'
 
 import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
@@ -50,6 +51,9 @@ export default function Projects() {
       </Typography>
       <div className={classes.projectCards}>
         <Fade>
+          <div className={classes.projects}>
+            <Aventyr />
+          </div>
           <div className={classes.projects}>
             <JungleKobenhavn />
           </div>
