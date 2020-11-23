@@ -23,6 +23,7 @@ import {
   SiNpm,
   SiNodeDotJs,
   SiAirbnb,
+  SiNetlify,
 } from 'react-icons/si'
 
 const useStyles = makeStyles((theme) => ({
@@ -96,12 +97,12 @@ export default function Aventyr() {
     new hoverEffect({
       parent: document.querySelector('#aventyr-project'),
       intensity: 0.3,
-      image1: 'https://i.ibb.co/mvYsY2Y/apperture-home.png',
-      image2: 'https://i.ibb.co/SJrrDH5/apperture-screenshot1.png',
-      displacementImage: 'https://i.ibb.co/jGFsy1r/8.jpg',
+      image1: 'https://i.ibb.co/7pkKRwL/aventyr-homepage.png',
+      image2: 'https://i.ibb.co/HHrD0Mh/aventyr-login.png',
+      displacementImage: 'https://i.ibb.co/7SPbxxz/6.jpg',
       speedIn: 1.5,
       speedOut: 1.5,
-      imagesRatio: 320 / 400,
+      imagesRatio: 280 / 400,
     })
   }, [])
 
@@ -115,12 +116,17 @@ export default function Aventyr() {
           </Typography>
         </CardContent>
         <div className={classes.text}>
-          <Typography className={classes.text}>FINISH DESCRIPTION</Typography>
-          <br />
           <Typography className={classes.text}>
-            We made our own Python Django API using REST Framework and Postgres
-            Database. Users can register, sign in, create a profile, follow
-            other users and upload their own photos.
+            Nov 2020
+            <br />
+            <br />
+            After completing a Jest and Enzyme Udemy course, I wanted to create
+            a simple log in page as my{' '}
+            <i>first attempt at Test Driven Development (TDD)</i>.
+            <br />
+            <br />
+            Even from doing a simple one page, I've realised how much testing is
+            involved. It's been a huge learning curve trying TDD.
           </Typography>
         </div>
         <div>
@@ -131,7 +137,7 @@ export default function Aventyr() {
           >
             <Grid>
               <IconButton
-                href="https://github.com/brendino500/APPerture"
+                href="https://github.com/brendino500/aventyr-login"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -141,7 +147,7 @@ export default function Aventyr() {
                 />
               </IconButton>
               <IconButton
-                href="http://apperture-project.herokuapp.com/"
+                href="https://aventyr-login.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -158,7 +164,6 @@ export default function Aventyr() {
               <SiHtml5 className={classes.techIcon} />
               <SiMaterialUi className={classes.techIcon} />
               <SiReact className={classes.techIcon} />
-              <SiPython className={classes.techIcon} />
               <SiNpm className={classes.techIcon} />
               <SiNodeDotJs className={classes.techIcon} />
               <SiNetlify className={classes.techIcon} />
@@ -168,7 +173,7 @@ export default function Aventyr() {
       </div>
 
       <a
-        href="http://apperture-project.herokuapp.com/"
+        href="https://aventyr-login.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
