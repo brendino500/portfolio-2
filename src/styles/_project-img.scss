@@ -1,0 +1,19 @@
+.project-text {
+  z-index: 1;
+  // transform: translate3d(10px, -10px, -20px);
+}
+
+.project-img img {
+  filter: grayscale(100%) contrast(120%);
+  box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.project-img:hover img {
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.project-img:hover img,
+.project-img:hover .glow-wrap {
+  margin-top: 5px;
+}

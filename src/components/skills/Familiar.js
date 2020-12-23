@@ -2,7 +2,9 @@ import React from 'react'
 import Theme from '../../Theme'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Container, ThemeProvider, Grid } from '@material-ui/core'
+import { Typography, ThemeProvider, Grid } from '@material-ui/core'
+import { SiHeroku, SiNetlify } from 'react-icons/si'
+import { IoLogoVercel } from 'react-icons/io5'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -85,6 +87,11 @@ export default function Familiar() {
         alignItems="center"
       >
         <Grid className={classes.iconAndText}>
+          <i className="devicon-typescript-plain skills-details-icon">
+            <Typography className={classes.text}>TypeScript</Typography>
+          </i>
+        </Grid>
+        <Grid className={classes.iconAndText}>
           <i className="devicon-mongodb-plain skills-details-icon">
             <Typography className={classes.text}>MongoDB</Typography>
           </i>
@@ -95,9 +102,21 @@ export default function Familiar() {
           </i>
         </Grid>
         <Grid className={classes.iconAndText}>
-          <i className="devicon-typescript-plain skills-details-icon">
-            <Typography className={classes.text}>TypeScript</Typography>
+          <i className="devicon-nodejs-plain skills-details-icon">
+            <Typography className={classes.text}>Node.js</Typography>
           </i>
+        </Grid>
+        <Grid className={`${classes.iconAndText} material-ui-icons`}>
+          <SiHeroku className="devicon-react-original skills-details-icon" />
+          <Typography className={classes.text}>Heroku</Typography>
+        </Grid>
+        <Grid className={`${classes.iconAndText} material-ui-icons`}>
+          <SiNetlify className="devicon-react-original skills-details-icon" />
+          <Typography className={classes.text}>Netlify</Typography>
+        </Grid>
+        <Grid className={`${classes.iconAndText} material-ui-icons`}>
+          <IoLogoVercel className="devicon-react-original skills-details-icon" />
+          <Typography className={classes.text}>Vercel</Typography>
         </Grid>
       </Grid>
     </ThemeProvider>

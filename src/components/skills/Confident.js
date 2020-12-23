@@ -3,7 +3,7 @@ import Theme from '../../Theme'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container, ThemeProvider, Grid } from '@material-ui/core'
-import { SiMaterialUi } from 'react-icons/si'
+import { SiMaterialUi, SiAdobelightroomclassic } from 'react-icons/si'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -114,16 +114,9 @@ export default function Confident() {
               <Typography className={classes.text}>React.js</Typography>
             </i>
           </Grid>
-          <Grid className={classes.iconAndText}>
-            <i className="devicon-nodejs-plain skills-details-icon">
-              <Typography className={classes.text}>Node.js</Typography>
-            </i>
-          </Grid>
-          <Grid className={classes.iconAndText}>
-            <div className="materialIconsSkills">
-              <SiMaterialUi className="materialIconSkillsDetails  material-skills" />
-              <Typography className={classes.text}>Material UI</Typography>
-            </div>
+          <Grid className={`${classes.iconAndText} material-ui-icons`}>
+            <SiMaterialUi className="devicon-react-original skills-details-icon" />
+            <Typography className={classes.text}>Material UI</Typography>
           </Grid>
           <Grid className={classes.iconAndText}>
             <i className="devicon-git-plain skills-details-icon">
@@ -134,6 +127,10 @@ export default function Confident() {
             <i className="devicon-github-plain skills-details-icon">
               <Typography className={classes.text}>GitHub</Typography>
             </i>
+          </Grid>
+          <Grid className={`${classes.iconAndText} material-ui-icons`}>
+            <SiAdobelightroomclassic className="devicon-react-original skills-details-icon" />
+            <Typography className={classes.text}>Adobe Lightroom</Typography>
           </Grid>
         </Grid>
       </Container>

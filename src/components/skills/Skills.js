@@ -5,16 +5,17 @@ import Beginner from './Beginner'
 
 import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Container, Divider } from '@material-ui/core'
+import { Typography, Container } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: '80vw',
   },
   title: {
     flexGrow: 1,
     fontFamily: 'Neuton',
-    fontSize: '42px',
+    fontSize: '40px',
     letterSpacing: '10px',
     color: '#d3c9c0',
     textAlign: 'center',
@@ -39,6 +40,7 @@ export default function Skills() {
         <br />
         SKILLS
       </Typography>
+
       <Fade bottom>
         <Confident />
         <Familiar />

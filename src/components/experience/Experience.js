@@ -1,29 +1,20 @@
-import React, { useState } from 'react'
-import GeneralAssembly from './GeneralAssembly'
-import FreelancePhotographer from './FreelancePhotographer'
-import CraftLondon from './CraftLondon'
-import ManchesterUni from './ManchesterUni'
-
+import React from 'react'
 import Fade from 'react-reveal/Fade'
-import { HiOutlineCode } from 'react-icons/hi'
-import { GiPhotoCamera } from 'react-icons/gi'
-import { IoIosMusicalNotes } from 'react-icons/io'
-import { BiCoffee } from 'react-icons/bi'
-
 import { makeStyles } from '@material-ui/core/styles'
+import TableRow from '@material-ui/core/TableRow'
 import {
   Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
 } from '@material-ui/core/'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '75%',
-    margin: '0 auto',
-    marginTop: '10vh',
+  table: {
+    width: '80vw',
+    display: 'flex',
+    marginLeft: '10%',
   },
   title: {
     flexGrow: 1,
@@ -32,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '10px',
     color: '#d3c9c0',
     textAlign: 'center',
+    margin: '4em 0 2em 0',
     [theme.breakpoints.between('xs', 'sm')]: {
       fontSize: 30,
     },
@@ -42,118 +34,75 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 40,
     },
   },
-  heading: {
-    flexGrow: 1,
-    fontFamily: 'Neuton',
-    fontSize: 30,
-    letterSpacing: 5,
+  text: {
+    fontFamily: 'Work Sans',
+    textTransform: 'uppercase',
     color: '#d3c9c0',
-    textAlign: 'center',
+    letterSpacing: 2,
     [theme.breakpoints.between('xs', 'sm')]: {
-      fontSize: 25,
+      fontSize: 12,
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      fontSize: 15,
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      fontSize: 15,
     },
   },
-  accordion: {
-    backgroundColor: '#323e47',
+  container: {
+    width: '50vw',
   },
 }))
 
-export default function SimpleAccordion() {
-  const classes = useStyles()
-  const [expanded, setExpanded] = React.useState(false)
+function createData(date, role, location) {
+  return { date, role, location }
+}
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false)
-  }
+const rows = [
+  createData(
+    'June 2020 - Sep 2020',
+    'Software Engineering Immersive Student',
+    '@General Assembly, London'
+  ),
+  createData('June 2018 - May 2020', 'Head Roaster', '@Craft London'),
+  createData('July 2016 - Feb 2020', 'Freelance Photographer', '@Freelance'),
+  createData('2017 - 2019', 'Piano Teacher', '@Freelance'),
+  createData('2013 - 2016', 'Barista Trainer', '@Department of Coffee, London'),
+  createData('2010 - 2013', 'MusB Music', '@University of Manchester'),
+]
+
+export default function Experience() {
+  const classes = useStyles()
 
   return (
     <>
-      <Typography className={classes.title}>
-        <br />
-        EXPERIENCE
-      </Typography>
-      <div className={classes.root}>
+      <Typography className={classes.title}>EXPERIENCE</Typography>
+
+      <div classes={classes.container}>
         <Fade bottom>
-          <Accordion
-            className={classes.accordion}
-            expanded={expanded === 'panel1'}
-            onChange={handleChange('panel1')}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1bh-content"
-              id="panel1bh-header"
-            >
-              <Typography className={classes.heading}>
-                <HiOutlineCode className="experience-icon" />
-                Coding
-              </Typography>
-            </AccordionSummary>
-
-            <AccordionDetails>
-              <GeneralAssembly />
-            </AccordionDetails>
-          </Accordion>
-
-          <Accordion
-            className={classes.accordion}
-            expanded={expanded === 'panel2'}
-            onChange={handleChange('panel2')}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2bh-content"
-              id="panel2bh-header"
-            >
-              <Typography className={classes.heading}>
-                <GiPhotoCamera className="experience-icon" />
-                Photography
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <FreelancePhotographer />
-            </AccordionDetails>
-          </Accordion>
-
-          <Accordion
-            className={classes.accordion}
-            expanded={expanded === 'panel3'}
-            onChange={handleChange('panel3')}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel3bh-content"
-              id="panel3bh-header"
-            >
-              <Typography className={classes.heading}>
-                <BiCoffee className="experience-icon" />
-                Coffee
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <CraftLondon />
-            </AccordionDetails>
-          </Accordion>
-
-          <Accordion
-            className={classes.accordion}
-            expanded={expanded === 'panel4'}
-            onChange={handleChange('panel4')}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel4bh-content"
-              id="panel4bh-header"
-            >
-              <Typography className={classes.heading}>
-                <IoIosMusicalNotes className="experience-icon" />
-                Music
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <ManchesterUni />
-            </AccordionDetails>
-          </Accordion>
+          <TableContainer>
+            <Table className={classes.table} aria-label="simple table">
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow key={row.date}>
+                    <TableCell
+                      component="th"
+                      scope="row"
+                      className={classes.text}
+                    >
+                      {row.date}
+                    </TableCell>
+                    <TableCell align="left" className={classes.text}>
+                      {row.role}
+                    </TableCell>
+                    <TableCell align="right" className={classes.text}>
+                      {row.location}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
         </Fade>
       </div>
     </>

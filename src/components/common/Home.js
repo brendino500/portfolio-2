@@ -6,7 +6,8 @@ import { Container, Typography, Grid } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '15%',
+    height: '70vh',
+    marginTop: '40vh',
     [theme.breakpoints.between('xs', 'sm')]: {
       marginTop: '55%',
     },

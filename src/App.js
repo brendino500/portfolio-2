@@ -1,12 +1,15 @@
 import React, { useRef, useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
+import Fade from 'react-reveal/Fade'
 
 import Home from './components/common/Home'
 import Skills from './components/skills/Skills'
-import Projects from './components/projects/Projects'
-import Experience from './components/experience/Experience'
 import About from './components/common/About'
 import Stalk from './components/common/Stalk'
+import Experience from './components/experience/Experience'
+import Projects from './components/projects/Projects'
+import MaxwellAndSkinner from './components/projects/MaxwellAndSkinner'
+import JungleKobenhavn from './components/projects/JungleKobenhavn'
 
 import { makeStyles } from '@material-ui/core/styles'
 import {
@@ -170,7 +173,7 @@ function App() {
   )
 
   return (
-    <>
+    <div className={`${classes.root} menu menu--inola`}>
       <BrowserRouter>
         <div className={classes.root}>
           <AppBar
@@ -192,35 +195,35 @@ function App() {
 
               <div className={classes.sectionDesktop}>
                 <Button
-                  className={classes.button}
+                  className={`${classes.button} menu__item`}
                   onClick={() => scrollTo(sectionSkillsRef)}
                 >
-                  Skills
+                  <span className="menu__item-name">Skills</span>
                 </Button>
                 <Button
-                  className={classes.button}
+                  className={`${classes.button} menu__item`}
                   onClick={() => scrollTo(sectionProjectsRef)}
                 >
-                  Projects
+                  <span className="menu__item-name">Projects</span>
                 </Button>
 
                 <Button
-                  className={classes.button}
+                  className={`${classes.button} menu__item`}
                   onClick={() => scrollTo(sectionExperienceRef)}
                 >
-                  Experience
+                  <span className="menu__item-name">Experience</span>
                 </Button>
                 <Button
-                  className={classes.button}
+                  className={`${classes.button} menu__item`}
                   onClick={() => scrollTo(sectionAboutRef)}
                 >
-                  About
+                  <span className="menu__item-name">About</span>
                 </Button>
                 <Button
-                  className={classes.button}
+                  className={`${classes.button} menu__item`}
                   onClick={() => scrollTo(sectionStalkRef)}
                 >
-                  Contact
+                  <span className="menu__item-name">Contact</span>
                 </Button>
               </div>
 
@@ -262,7 +265,7 @@ function App() {
           </div>
         </main>
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 

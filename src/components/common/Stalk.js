@@ -4,12 +4,14 @@ import Fade from 'react-reveal/Fade'
 import EmailIcon from '@material-ui/icons/Email'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
+import TwitterIcon from '@material-ui/icons/Twitter'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container, Typography, IconButton, Grid } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   container: {
     maxWidth: 1000,
+    height: '100vh',
   },
   title: {
     flexGrow: 1,
@@ -80,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footer: {
-    marginTop: '20%',
+    marginTop: '7%',
     fontFamily: 'Neuton',
     color: '#d3c9c0',
     fontSize: 15,
@@ -168,6 +170,21 @@ export default function Stalk() {
             <Typography className={classes.text}>
               linkedin.com/in/brendaty
             </Typography>
+          </Grid>
+          <Grid
+            container
+            direction="row"
+            justify="flex-start"
+            alignItems="center"
+          >
+            <IconButton
+              href="https://twitter.com/btcodes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon fontSize="large" className={classes.icon} />
+            </IconButton>
+            <Typography className={classes.text}>@btcodes</Typography>
           </Grid>
         </Grid>
       </Fade>

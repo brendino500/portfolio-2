@@ -19,14 +19,11 @@ import {
   SiJavascript,
   SiCss3,
   SiHtml5,
-  SiMongodb,
-  SiNodeDotJs,
   SiMaterialUi,
-  SiTypescript,
   SiReact,
-  SiHeroku,
   SiNpm,
 } from 'react-icons/si'
+import { IoLogoVercel } from 'react-icons/io5'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,9 +31,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#323e47',
     border: 'none',
     boxShadow: 'none',
+    height: 400,
   },
   content: {
-    width: '25vw',
+    width: 500,
   },
   title: {
     fontSize: 40,
@@ -95,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   linksIcons: {
+    margin: 0,
     [theme.breakpoints.between('xs', 'sm')]: {
       alignItems: 'center',
     },
@@ -123,50 +122,38 @@ const useStyles = makeStyles((theme) => ({
   projectImg: {
     height: 'auto',
     width: '35vw',
-    margin: '5vh 0 0 10vw',
+    margin: '5vh 3vw 0 3vw',
   },
 }))
 
-export default function JungleKobenhavn() {
+export default function MaxwellAndSkinner() {
   const classes = useStyles()
-
-  useEffect(() => {
-    new hoverEffect({
-      parent: document.querySelector('#jungle-kobenhavn'),
-      intensity: 0.3,
-      image1: 'https://i.ibb.co/9vMV4z7/JK1.png',
-      image2: 'https://i.ibb.co/W5C5qPf/JK2.png',
-      displacementImage: 'https://i.ibb.co/8N59RH3/14.jpg',
-      speedIn: 1.5,
-      speedOut: 1.5,
-      imagesRatio: 33 / 415,
-    })
-  }, [])
 
   return (
     <Card className={classes.root}>
+      <div>
+        <a
+          href="https://maxwell-skinner.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-img"
+        >
+          <img
+            src="https://i.ibb.co/KXW09Wt/homepage.png"
+            alt="plants"
+            className={classes.projectImg}
+          />
+        </a>
+      </div>
       <div className={classes.details}>
-        <CardContent className={`${classes.content}`}>
-          <Typography className={classes.number}>10 . 20</Typography>
-          <Typography className={classes.title}>Jungle København</Typography>
+        <CardContent className={classes.content}>
+          <Typography className={classes.number}>11 . 20</Typography>
+          <Typography className={classes.title}>Maxwell & Skinner</Typography>
           <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>
-            Solo Project • 14 Days
+            Solo Project • 1 Day
           </Typography>
         </CardContent>
-        {/* <div className={classes.text}>
-          <Typography className={classes.text}>
-            After the 12 week bootcamp I wanted to{' '}
-            <i>challenge myself to make an ecommerce site.</i> This is the
-            closest thing I'll be to owning my own plant shop!
-          </Typography>
-          <Typography className={classes.text}>
-            This is also my first deployed project with TypeScript which was a
-            huge learning curve! I also worked with a designer at the beginning
-            as I enjoy being collaborative but mainly to have experience working
-            with a UX team member.
-          </Typography>
-        </div> */}
         <div>
           <Grid
             container
@@ -175,7 +162,7 @@ export default function JungleKobenhavn() {
           >
             <Grid className={classes.linksIcons}>
               <IconButton
-                href="https://github.com/brendino500/junglekobenhavn"
+                href="https://maxwell-skinner.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -185,7 +172,7 @@ export default function JungleKobenhavn() {
                 />
               </IconButton>
               <IconButton
-                href="http://jungle-kobenhavn.herokuapp.com/"
+                href="https://github.com/brendino500/maxwell-skinner"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -197,63 +184,16 @@ export default function JungleKobenhavn() {
             </Grid>
             <Grid>
               <SiJavascript className={classes.techIcon} />
-              <SiTypescript className={classes.techIcon} />
               <SiMaterialUi className={classes.techIcon} />
               <SiReact className={classes.techIcon} />
               <SiHtml5 className={classes.techIcon} />
               <SiCss3 className={classes.techIcon} />
-              <SiMongodb className={classes.techIcon} />
-              <SiNodeDotJs className={classes.techIcon} />
               <SiNpm className={classes.techIcon} />
-              <i className="devicon-express-original skills-details-icon"></i>
-              <SiHeroku className={classes.techIcon} />
+              <IoLogoVercel className={classes.techIcon} />
             </Grid>
           </Grid>
         </div>
       </div>
-
-      <div>
-        <a
-          href="http://jungle-kobenhavn.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-img"
-        >
-          <img
-            src="https://i.ibb.co/9vMV4z7/JK1.png"
-            alt="plants"
-            className={classes.projectImg}
-          />
-        </a>
-      </div>
-      {/* <div>
-        <a
-          href="http://jungle-kobenhavn.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardMedia
-            className={classes.image}
-            id="jungle-kobenhavn"
-            alt="jungle kobenhavn"
-          />
-        </a>
-      </div> */}
-      {/* <div>
-        <Hidden smUp>
-          <a
-            href="http://jungle-kobenhavn.herokuapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <CardMedia
-              className={classes.mobileImage}
-              id="jungle-kobenhavn-mobile"
-              alt="jungle kobenhavn"
-            />
-          </a>
-        </Hidden>
-      </div> */}
     </Card>
   )
 }

@@ -5,6 +5,7 @@ import Nalu from './Nalu'
 import WeatherxTfl from './WeatherxTfl'
 import Tetris from './Tetris'
 import Aventyr from './Aventyr'
+import MaxwellAndSkinner from './MaxwellAndSkinner'
 
 import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
@@ -52,12 +53,15 @@ export default function Projects() {
       <div className={classes.projectCards}>
         <Fade>
           <div className={classes.projects}>
-            <Aventyr />
+            <MaxwellAndSkinner />
           </div>
+          {/* <div className={classes.projects}>
+            <Aventyr />
+          </div> */}
           <div className={classes.projects}>
             <JungleKobenhavn />
           </div>
-          <div className={classes.projects}>
+          {/* <div className={classes.projects}>
             <Apperture />
           </div>
           <div className={classes.projects}>
@@ -68,7 +72,7 @@ export default function Projects() {
           </div>
           <div className={classes.projects}>
             <Tetris />
-          </div>
+          </div> */}
         </Fade>
       </div>
     </Container>
