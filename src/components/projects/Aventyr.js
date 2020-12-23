@@ -77,13 +77,11 @@ const useStyles = makeStyles((theme) => ({
   },
   profileLinks: {
     color: '#d3c9c0',
-    margin: 10,
   },
   techIcon: {
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
@@ -96,14 +94,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.between('xs', 'sm')]: {
       alignItems: 'center',
     },
-  },
-  mobileImage: {
-    flexGrow: 1,
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  image: {
-    height: 400,
   },
   divider: {
     backgroundColor: '#d3c9c0',
@@ -161,7 +151,7 @@ export default function SpaceInvaders() {
         </CardContent>
         <div className={classes.text}>
           <Typography className={classes.text}>
-            • Single page TDD <br />• Jest & Enzyme
+            • Single page using TDD <br />• Jest & Enzyme
           </Typography>
         </div>
         <div>

@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import hoverEffect from 'hover-effect'
+import React from 'react'
 
 import {
   Card,
@@ -113,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
   projectImg: {
     height: 'auto',
     width: '35vw',
-    margin: '5vh 0 0 10vw',
+    margin: '5vh 0 0 0',
   },
   details: {
     marginLeft: '3vw',
