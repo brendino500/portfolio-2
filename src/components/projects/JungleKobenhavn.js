@@ -97,14 +97,6 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
     },
   },
-  mobileImage: {
-    flexGrow: 1,
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  image: {
-    height: 400,
-  },
   divider: {
     backgroundColor: '#d3c9c0',
     height: '2px',
@@ -134,19 +126,6 @@ const useStyles = makeStyles((theme) => ({
 export default function JungleKobenhavn() {
   const classes = useStyles()
 
-  useEffect(() => {
-    new hoverEffect({
-      parent: document.querySelector('#jungle-kobenhavn'),
-      intensity: 0.3,
-      image1: 'https://i.ibb.co/9vMV4z7/JK1.png',
-      image2: 'https://i.ibb.co/W5C5qPf/JK2.png',
-      displacementImage: 'https://i.ibb.co/8N59RH3/14.jpg',
-      speedIn: 1.5,
-      speedOut: 1.5,
-      imagesRatio: 33 / 415,
-    })
-  }, [])
-
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
@@ -165,12 +144,6 @@ export default function JungleKobenhavn() {
             <i>challenge myself to make an ecommerce site.</i> This is the
             closest thing I'll be to owning my own plant shop! */}
           </Typography>
-          {/* <Typography className={classes.text}>
-            This is also my first deployed project with TypeScript which was a
-            huge learning curve! I also worked with a designer at the beginning
-            as I enjoy being collaborative but mainly to have experience working
-            with a UX team member.
-          </Typography> */}
         </div>
         <div>
           <Grid
@@ -231,34 +204,6 @@ export default function JungleKobenhavn() {
           />
         </a>
       </div>
-      {/* <div>
-        <a
-          href="http://jungle-kobenhavn.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CardMedia
-            className={classes.image}
-            id="jungle-kobenhavn"
-            alt="jungle kobenhavn"
-          />
-        </a>
-      </div> */}
-      {/* <div>
-        <Hidden smUp>
-          <a
-            href="http://jungle-kobenhavn.herokuapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <CardMedia
-              className={classes.mobileImage}
-              id="jungle-kobenhavn-mobile"
-              alt="jungle kobenhavn"
-            />
-          </a>
-        </Hidden>
-      </div> */}
     </Card>
   )
 }
