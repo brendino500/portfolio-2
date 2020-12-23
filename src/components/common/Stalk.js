@@ -191,8 +191,7 @@ export default function Stalk() {
 
       <Fade bottom cascade>
         <Typography className={classes.footer}>
-          I made this website all by myself using: Robin Dela's Hover Effect,
-          React Hooks and Material UI.
+          I made this website all by myself using React and Material UI.
         </Typography>
       </Fade>
     </Container>

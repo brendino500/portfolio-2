@@ -8,8 +8,6 @@ import About from './components/common/About'
 import Stalk from './components/common/Stalk'
 import Experience from './components/experience/Experience'
 import Projects from './components/projects/Projects'
-import MaxwellAndSkinner from './components/projects/MaxwellAndSkinner'
-import JungleKobenhavn from './components/projects/JungleKobenhavn'
 
 import { makeStyles } from '@material-ui/core/styles'
 import {
