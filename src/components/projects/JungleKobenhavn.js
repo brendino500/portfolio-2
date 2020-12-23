@@ -138,10 +138,7 @@ export default function JungleKobenhavn() {
         </CardContent>
         <div className={classes.text}>
           <Typography className={classes.text}>
-            • Fullstack TypeScript & React Hooks
-            {/* After the 12 week bootcamp I wanted to{' '}
-            <i>challenge myself to make an ecommerce site.</i> This is the
-            closest thing I'll be to owning my own plant shop! */}
+            • Fullstack Ecommerce site using TypeScript & React Hooks
           </Typography>
         </div>
         <div>

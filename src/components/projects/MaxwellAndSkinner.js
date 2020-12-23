@@ -1,14 +1,11 @@
-import React, { useEffect } from 'react'
-import hoverEffect from 'hover-effect'
+import React from 'react'
 
 import {
   Card,
   Grid,
   Typography,
   CardContent,
-  CardMedia,
   IconButton,
-  Hidden,
   Divider,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -157,6 +154,11 @@ export default function MaxwellAndSkinner() {
             Solo Project • 1 Day
           </Typography>
         </CardContent>
+        <div className={classes.text}>
+          <Typography className={classes.text}>
+            • Single page web design using Material UI
+          </Typography>
+        </div>
         <div>
           <Grid
             container

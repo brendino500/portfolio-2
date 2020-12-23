@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
   },
   projectImg: {
     height: 'auto',
-    width: '25vw',
+    width: '30vw',
     margin: '5vh 3vw 0 3vw',
   },
   details: {

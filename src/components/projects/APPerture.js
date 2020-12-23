@@ -132,12 +132,12 @@ export default function APPerture() {
         <CardContent className={classes.content}>
           <Typography className={classes.number}>09 . 20</Typography>
           <Typography className={classes.title}>APPerture</Typography>
+          <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>
             Paired Project • 7 Days
           </Typography>
         </CardContent>
         <div className={classes.text}>
-          <Typography className={classes.text}></Typography>
           <Typography className={classes.text}>
             • Instagram x Unsplash <br />• Fullstack CRUD application
           </Typography>
