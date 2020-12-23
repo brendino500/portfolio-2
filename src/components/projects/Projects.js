@@ -7,6 +7,7 @@ import Tetris from './Tetris'
 import Aventyr from './Aventyr'
 import MaxwellAndSkinner from './MaxwellAndSkinner'
 import SpaceInvaders from './SpaceInvaders'
+import Pong from './Pong'
 
 import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
@@ -84,15 +85,22 @@ export default function Projects() {
           </div>
           <div className={classes.projects}>
             <Nalu />
-            <Divider className={classes.dividerRight} />
+            <Divider className={classes.dividerLeft} />
           </div>
           <div className={classes.projects}>
             <WeatherxTfl />
+            <Divider className={classes.dividerRight} />
+          </div>
+          <div className={classes.projects}>
+            <Tetris />
             <Divider className={classes.dividerLeft} />
           </div>
           <div className={classes.projects}>
+            <Pong />
+            <Divider className={classes.dividerRight} />
+          </div>
+          <div className={classes.projects}>
             <MaxwellAndSkinner />
-            <Divider className={classes.dividerLeft} />
           </div>
 
           {/* <div className={classes.projects}>

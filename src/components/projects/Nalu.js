@@ -181,7 +181,7 @@ export default function Nalu() {
                 />
               </IconButton>
             </Grid>
-            <Grid>
+            <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
               <SiHtml5 className={classes.techIcon} />
               <SiCss3 className={classes.techIcon} />

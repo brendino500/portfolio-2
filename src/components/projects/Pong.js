@@ -11,17 +11,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import {
-  SiJavascript,
-  SiCss3,
-  SiHtml5,
-  SiBulma,
-  SiSass,
-  SiReact,
-  SiNetlify,
-  SiNpm,
-  SiNodeDotJs,
-} from 'react-icons/si'
+import { SiJava } from 'react-icons/si'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#323e47',
     border: 'none',
     boxShadow: 'none',
-    marginBottom: 40,
+    height: 350,
   },
   content: {
-    width: '30vw',
+    width: 500,
   },
   title: {
     fontSize: 40,
@@ -81,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
@@ -90,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   linksIcons: {
+    margin: 0,
     [theme.breakpoints.between('xs', 'sm')]: {
       alignItems: 'center',
     },
@@ -109,8 +99,8 @@ const useStyles = makeStyles((theme) => ({
   },
   projectImg: {
     height: 'auto',
-    width: '35vw',
-    margin: '5vh 0 0 0',
+    width: '25vw',
+    margin: '5vh 3vw 0 3vw',
   },
   details: {
     marginLeft: '3vw',
@@ -120,24 +110,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function WeatherxTfl() {
+export default function Tetris() {
   const classes = useStyles()
+  //
 
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography className={classes.number}>08 . 2020</Typography>
-          <Typography className={classes.title}>Weather x TfL</Typography>
+          <Typography className={classes.number}>11 . 2020</Typography>
+          <Typography className={classes.title}>Pong</Typography>
           <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>
-            Paired Project • 48 Hours
+            Solo Project • 1 Days
           </Typography>
         </CardContent>
         <div className={classes.text}>
           <Typography className={classes.text}>
-            • Weather x Tfl <br /> • Frontend React app pulling from 5 external
-            API's
+            • Game development in Java to refresh on knowledge in a strictly
+            typed language before tackling TypeScript
           </Typography>
         </div>
         <div>
@@ -148,7 +139,7 @@ export default function WeatherxTfl() {
           >
             <Grid>
               <IconButton
-                href="https://github.com/brendino500/sei-project-2"
+                href="https://github.com/brendino500/pong-java"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -157,42 +148,23 @@ export default function WeatherxTfl() {
                   fontSize="small"
                 />
               </IconButton>
-              <IconButton
-                href="https://weather-bike-tube.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkIcon
-                  className={('github-link', classes.profileLinks)}
-                  fontSize="small"
-                />
-              </IconButton>
             </Grid>
             <Grid className={classes.icons}>
-              <SiJavascript className={classes.techIcon} />
-              <SiHtml5 className={classes.techIcon} />
-              <SiCss3 className={classes.techIcon} />
-              <SiSass className={classes.techIcon} />
-              <SiBulma className={classes.techIcon} />
-              <SiReact className={classes.techIcon} />
-              <SiNpm className={classes.techIcon} />
-              <SiNodeDotJs className={classes.techIcon} />
-              <SiNetlify className={classes.techIcon} />
+              <SiJava className={classes.techIcon} />
             </Grid>
           </Grid>
         </div>
       </div>
-
       <div>
         <a
-          href="https://weather-bike-tube.netlify.app/"
+          href="https://github.com/brendino500/pong-java"
           target="_blank"
           rel="noopener noreferrer"
           className="project-img"
         >
           <img
-            src="https://i.ibb.co/47ds104/TFL1.png"
-            alt="project"
+            src="https://i.ibb.co/bbDcn53/pong-screenshot.png"
+            alt="tetris"
             className={classes.projectImg}
           />
         </a>
