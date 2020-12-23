@@ -6,6 +6,7 @@ import WeatherxTfl from './WeatherxTfl'
 import Tetris from './Tetris'
 import Aventyr from './Aventyr'
 import MaxwellAndSkinner from './MaxwellAndSkinner'
+import SpaceInvaders from './SpaceInvaders'
 
 import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
@@ -52,6 +53,9 @@ export default function Projects() {
       </Typography>
       <div className={classes.projectCards}>
         <Fade>
+          <div className={classes.projects}>
+            <SpaceInvaders />
+          </div>
           <div className={classes.projects}>
             <MaxwellAndSkinner />
           </div>
