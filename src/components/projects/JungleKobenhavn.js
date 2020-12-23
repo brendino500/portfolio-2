@@ -32,9 +32,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#323e47',
     border: 'none',
     boxShadow: 'none',
+    marginBottom: 40,
   },
   content: {
-    width: '25vw',
+    width: '30vw',
   },
   title: {
     fontSize: 40,
@@ -78,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
   },
   profileLinks: {
     color: '#d3c9c0',
-    margin: 10,
   },
   techIcon: {
     color: '#d3c9c0',
@@ -158,19 +158,20 @@ export default function JungleKobenhavn() {
             Solo Project • 14 Days
           </Typography>
         </CardContent>
-        {/* <div className={classes.text}>
+        <div className={classes.text}>
           <Typography className={classes.text}>
-            After the 12 week bootcamp I wanted to{' '}
+            • Fullstack TypeScript & React Hooks
+            {/* After the 12 week bootcamp I wanted to{' '}
             <i>challenge myself to make an ecommerce site.</i> This is the
-            closest thing I'll be to owning my own plant shop!
+            closest thing I'll be to owning my own plant shop! */}
           </Typography>
-          <Typography className={classes.text}>
+          {/* <Typography className={classes.text}>
             This is also my first deployed project with TypeScript which was a
             huge learning curve! I also worked with a designer at the beginning
             as I enjoy being collaborative but mainly to have experience working
             with a UX team member.
-          </Typography>
-        </div> */}
+          </Typography> */}
+        </div>
         <div>
           <Grid
             container

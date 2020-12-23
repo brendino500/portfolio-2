@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
 import GitHubIcon from '@material-ui/icons/GitHub'
 
-import { SiTypescript, SiPixiv } from 'react-icons/si'
+import { SiTypescript } from 'react-icons/si'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -68,13 +68,11 @@ const useStyles = makeStyles((theme) => ({
   },
   profileLinks: {
     color: '#d3c9c0',
-    margin: 10,
   },
   techIcon: {
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
@@ -87,14 +85,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.between('xs', 'sm')]: {
       alignItems: 'center',
     },
-  },
-  mobileImage: {
-    flexGrow: 1,
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  image: {
-    height: 400,
   },
   divider: {
     backgroundColor: '#d3c9c0',
@@ -127,6 +117,20 @@ export default function SpaceInvaders() {
 
   return (
     <Card className={classes.root}>
+      <div>
+        <a
+          href="https://github.com/brendino500/space-invaders"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-img"
+        >
+          <img
+            src="https://i.ibb.co/XxgR9c5/spaceinvaders.png"
+            alt="space invaders"
+            className={classes.projectImg}
+          />
+        </a>
+      </div>
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography className={classes.number}>12 . 2020</Typography>
@@ -136,6 +140,11 @@ export default function SpaceInvaders() {
             Paired Project • 2 Months
           </Typography>
         </CardContent>
+        <div className={classes.text}>
+          <Typography className={classes.text}>
+            • Game development using Pixi.js
+          </Typography>
+        </div>
         <div>
           <Grid
             container
@@ -174,20 +183,6 @@ export default function SpaceInvaders() {
             </Grid>
           </Grid>
         </div>
-      </div>
-      <div>
-        <a
-          href="https://github.com/brendino500/space-invaders"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-img"
-        >
-          <img
-            src="https://i.ibb.co/XxgR9c5/spaceinvaders.png"
-            alt="space invaders"
-            className={classes.projectImg}
-          />
-        </a>
       </div>
     </Card>
   )

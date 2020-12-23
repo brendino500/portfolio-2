@@ -6,9 +6,8 @@ import {
   Grid,
   Typography,
   CardContent,
-  CardMedia,
   IconButton,
-  Hidden,
+  Divider,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -17,7 +16,6 @@ import {
   SiJavascript,
   SiJest,
   SiHtml5,
-  SiPython,
   SiMaterialUi,
   SiReact,
   SiNpm,
@@ -29,10 +27,13 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: '#394651',
+    backgroundColor: '#323e47',
+    border: 'none',
+    boxShadow: 'none',
+    height: 400,
   },
   content: {
-    width: 'auto',
+    width: 500,
   },
   title: {
     fontSize: 40,
@@ -82,51 +83,85 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '10%',
+    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
     bottom: 0,
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  linksIcons: {
+    margin: 0,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      alignItems: 'center',
+    },
+  },
+  mobileImage: {
+    flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  image: {
+    height: 400,
+  },
+  divider: {
+    backgroundColor: '#d3c9c0',
+    height: '2px',
+    width: '9vw',
+  },
+  number: {
+    fontSize: 18,
+    fontFamily: 'Libre Baskerville',
+    color: '#d3c9c0',
+    letterSpacing: 2,
+    marginTop: 10,
+    marginBottom: 5,
+  },
+  projectImg: {
+    height: 'auto',
+    width: '25vw',
+    margin: '5vh 3vw 0 3vw',
+  },
+  details: {
+    marginLeft: '3vw',
+  },
+  icons: {
+    marginLeft: 10,
   },
 }))
 
-export default function Aventyr() {
+export default function SpaceInvaders() {
   const classes = useStyles()
-
-  useEffect(() => {
-    new hoverEffect({
-      parent: document.querySelector('#aventyr-project'),
-      intensity: 0.3,
-      image1: 'https://i.ibb.co/7pkKRwL/aventyr-homepage.png',
-      image2: 'https://i.ibb.co/HHrD0Mh/aventyr-login.png',
-      displacementImage: 'https://i.ibb.co/7SPbxxz/6.jpg',
-      speedIn: 1.5,
-      speedOut: 1.5,
-      imagesRatio: 280 / 400,
-    })
-  }, [])
 
   return (
     <Card className={classes.root}>
+      <div>
+        <a
+          href="https://aventyr-login.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-img"
+        >
+          <img
+            src="https://i.ibb.co/X5Yt3hM/aventyr-homepage.png"
+            alt="Äventyr login"
+            className={classes.projectImg}
+          />
+        </a>
+      </div>
       <div className={classes.details}>
         <CardContent className={classes.content}>
+          <Typography className={classes.number}>11 . 2020</Typography>
           <Typography className={classes.title}>Äventyr</Typography>
+          <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>
             Solo Project • 2 Days
           </Typography>
         </CardContent>
         <div className={classes.text}>
           <Typography className={classes.text}>
-            Nov 2020
-            <br />
-            <br />
-            After completing a Jest and Enzyme Udemy course, I wanted to create
-            a simple log in page as my{' '}
-            <i>first attempt at Test Driven Development (TDD)</i>.
-            <br />
-            <br />
-            Even from doing a simple one page, I've realised how much testing is
-            involved. It's been a huge learning curve trying TDD.
+            • Single page TDD <br />• Jest & Enzyme
           </Typography>
         </div>
         <div>
@@ -135,7 +170,7 @@ export default function Aventyr() {
             justify="space-between"
             className={classes.iconLayout}
           >
-            <Grid>
+            <Grid className={classes.linksIcons}>
               <IconButton
                 href="https://github.com/brendino500/aventyr-login"
                 target="_blank"
@@ -157,7 +192,7 @@ export default function Aventyr() {
                 />
               </IconButton>
             </Grid>
-            <Grid>
+            <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
               <SiJest className={classes.techIcon} />
               <SiAirbnb className={classes.techIcon} />
@@ -171,18 +206,6 @@ export default function Aventyr() {
           </Grid>
         </div>
       </div>
-
-      <a
-        href="https://aventyr-login.netlify.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <CardMedia
-          className={classes.image}
-          id="aventyr-project"
-          alt="aventyr-project"
-        />
-      </a>
     </Card>
   )
 }

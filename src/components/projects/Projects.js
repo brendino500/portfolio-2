@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '85%',
+    marginTop: '10%',
   },
   projectCards: {
     marginTop: '5%',
@@ -70,15 +71,18 @@ export default function Projects() {
             <Divider className={classes.dividerLeft} />
           </div>
           <div className={classes.projects}>
+            <JungleKobenhavn />
+            <Divider className={classes.dividerRight} />
+          </div>
+          <div className={classes.projects}>
+            <Aventyr />
+            <Divider className={classes.dividerLeft} />
+          </div>
+          <div className={classes.projects}>
             <MaxwellAndSkinner />
             <Divider className={classes.dividerRight} />
           </div>
-          {/* <div className={classes.projects}>
-            <Aventyr />
-          </div> */}
-          <div className={classes.projects}>
-            <JungleKobenhavn />
-          </div>
+
           {/* <div className={classes.projects}>
             <Apperture />
           </div>
