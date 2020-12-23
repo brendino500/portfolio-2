@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react'
-import hoverEffect from 'hover-effect'
+import React from 'react'
 
 import {
   Card,
   Grid,
   Typography,
   CardContent,
-  CardMedia,
   IconButton,
-  Hidden,
+  Divider,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -28,10 +26,13 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: '#394651',
+    backgroundColor: '#323e47',
+    border: 'none',
+    boxShadow: 'none',
+    marginBottom: 40,
   },
   content: {
-    width: 'auto',
+    width: '30vw',
   },
   title: {
     fontSize: 40,
@@ -75,58 +76,68 @@ const useStyles = makeStyles((theme) => ({
   },
   profileLinks: {
     color: '#d3c9c0',
-    margin: 10,
   },
   techIcon: {
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '10%',
+    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
     bottom: 0,
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  linksIcons: {
+    [theme.breakpoints.between('xs', 'sm')]: {
+      alignItems: 'center',
+    },
+  },
+  divider: {
+    backgroundColor: '#d3c9c0',
+    height: '2px',
+    width: '9vw',
+  },
+  number: {
+    fontSize: 18,
+    fontFamily: 'Libre Baskerville',
+    color: '#d3c9c0',
+    letterSpacing: 2,
+    marginTop: 10,
+    marginBottom: 5,
+  },
+  projectImg: {
+    height: 'auto',
+    width: '35vw',
+    margin: '5vh 0 0 0',
+  },
+  details: {
+    marginLeft: '3vw',
+  },
+  icons: {
+    marginLeft: 10,
   },
 }))
 
 export default function WeatherxTfl() {
   const classes = useStyles()
 
-  useEffect(() => {
-    new hoverEffect({
-      parent: document.querySelector('#weather-tfl'),
-      intensity: 0.3,
-      image1: 'https://i.ibb.co/6cMwRTD/reactathon-screenshot.png',
-      image2: 'https://i.ibb.co/K6qvsp0/tfl-bikes.png',
-      displacementImage: 'https://i.ibb.co/6yGCdRr/4.png',
-      speedIn: 1.5,
-      speedOut: 1.5,
-      imagesRatio: 320 / 400,
-    })
-  }, [])
-
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
+          <Typography className={classes.number}>08 . 2020</Typography>
           <Typography className={classes.title}>Weather x TfL</Typography>
+          <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>
             Paired Project • 48 Hours
           </Typography>
         </CardContent>
         <div className={classes.text}>
           <Typography className={classes.text}>
-            Out of the whole of the General Assembly course, this was, by far,
-            the <i>most fun project!</i> I was paired with Julien Xemard, and
-            little did we know that would start our intense coding relationship(
-            <s>friendship?</s>)
-            <br />
-            <br />
-            We wanted to create an app with geolocation (if the user accepted)
-            which would gather the local weather and time for their current
-            location. The other pages were linked to the current London Tube
-            line services, the TfL Bike Points as well as the Air Quality Index
-            in London.
+            • Weather x Tfl <br /> • Frontend React app pulling from 5 external
+            API's
           </Typography>
         </div>
         <div>
@@ -171,17 +182,21 @@ export default function WeatherxTfl() {
           </Grid>
         </div>
       </div>
-      <a
-        href="https://weather-bike-tube.netlify.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <CardMedia
-          className={classes.image}
-          id="weather-tfl"
-          alt="weather-tfl"
-        />
-      </a>
+
+      <div>
+        <a
+          href="https://weather-bike-tube.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-img"
+        >
+          <img
+            src="https://i.ibb.co/47ds104/TFL1.png"
+            alt="project"
+            className={classes.projectImg}
+          />
+        </a>
+      </div>
     </Card>
   )
 }

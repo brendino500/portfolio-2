@@ -87,6 +87,10 @@ export default function Projects() {
             <Divider className={classes.dividerRight} />
           </div>
           <div className={classes.projects}>
+            <WeatherxTfl />
+            <Divider className={classes.dividerLeft} />
+          </div>
+          <div className={classes.projects}>
             <MaxwellAndSkinner />
             <Divider className={classes.dividerLeft} />
           </div>

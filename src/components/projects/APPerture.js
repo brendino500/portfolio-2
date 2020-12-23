@@ -130,7 +130,7 @@ export default function APPerture() {
     <Card className={classes.root}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography className={classes.number}>09 . 20</Typography>
+          <Typography className={classes.number}>09 . 2020</Typography>
           <Typography className={classes.title}>APPerture</Typography>
           <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>

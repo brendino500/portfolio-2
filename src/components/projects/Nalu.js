@@ -150,7 +150,7 @@ export default function Nalu() {
         </CardContent>
         <div className={classes.text}>
           <Typography className={classes.text}>
-            •Fullstack MERN application with CRUD functionality
+            •Fullstack MERN app with CRUD functionality
           </Typography>
         </div>
         <div>

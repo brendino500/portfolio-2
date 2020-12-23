@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#323e47',
     border: 'none',
     boxShadow: 'none',
-    height: 400,
+    height: 350,
   },
   content: {
     width: 500,
@@ -75,13 +75,11 @@ const useStyles = makeStyles((theme) => ({
   },
   profileLinks: {
     color: '#d3c9c0',
-    margin: 10,
   },
   techIcon: {
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
@@ -94,14 +92,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.between('xs', 'sm')]: {
       alignItems: 'center',
     },
-  },
-  mobileImage: {
-    flexGrow: 1,
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  image: {
-    height: 400,
   },
   divider: {
     backgroundColor: '#d3c9c0',
@@ -121,8 +111,11 @@ const useStyles = makeStyles((theme) => ({
     width: '35vw',
     margin: '5vh 3vw 0 3vw',
   },
+  details: {
+    marginLeft: '3vw',
+  },
   icons: {
-    marginLeft: 15,
+    marginLeft: 10,
   },
 }))
 
@@ -156,7 +149,8 @@ export default function MaxwellAndSkinner() {
         </CardContent>
         <div className={classes.text}>
           <Typography className={classes.text}>
-            • Single page web design using Material UI
+            • Single page web design using Material UI <br />
+            to improve styling and UX
           </Typography>
         </div>
         <div>
