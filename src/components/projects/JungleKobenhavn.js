@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '10%',
+    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
@@ -125,6 +125,9 @@ const useStyles = makeStyles((theme) => ({
   },
   details: {
     marginLeft: '3vw',
+  },
+  icons: {
+    marginLeft: 10,
   },
 }))
 
@@ -196,7 +199,7 @@ export default function JungleKobenhavn() {
                 />
               </IconButton>
             </Grid>
-            <Grid>
+            <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
               <SiTypescript className={classes.techIcon} />
               <SiMaterialUi className={classes.techIcon} />

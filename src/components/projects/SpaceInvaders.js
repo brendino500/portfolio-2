@@ -6,9 +6,7 @@ import {
   Grid,
   Typography,
   CardContent,
-  CardMedia,
   IconButton,
-  Hidden,
   Divider,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -76,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '10%',
+    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
@@ -113,11 +111,14 @@ const useStyles = makeStyles((theme) => ({
   },
   projectImg: {
     height: 'auto',
-    width: '35vw',
+    width: '25vw',
     margin: '5vh 3vw 0 3vw',
   },
   details: {
     marginLeft: '3vw',
+  },
+  icons: {
+    marginLeft: 10,
   },
 }))
 
@@ -128,7 +129,7 @@ export default function SpaceInvaders() {
     <Card className={classes.root}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography className={classes.number}>12 . 20</Typography>
+          <Typography className={classes.number}>12 . 2020</Typography>
           <Typography className={classes.title}>Space Invaders</Typography>
           <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>
@@ -163,9 +164,13 @@ export default function SpaceInvaders() {
                 />
               </IconButton>
             </Grid>
-            <Grid>
+            <Grid className={classes.icons}>
               <SiTypescript className={classes.techIcon} />
-              <SiPixiv className={classes.techIcon} />
+              <img
+                src="https://i.ibb.co/3hPnV9k/00c39b71-e5f2-4ec9-8919-7710afba3f83-200x200.png"
+                alt="pixijs"
+                className="pixi-logo"
+              />
             </Grid>
           </Grid>
         </div>

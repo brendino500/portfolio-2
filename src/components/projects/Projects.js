@@ -10,7 +10,7 @@ import SpaceInvaders from './SpaceInvaders'
 
 import Fade from 'react-reveal/Fade'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Container } from '@material-ui/core'
+import { Typography, Container, Divider } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   projects: {
     margin: 10,
+    marginTop: '5vh',
   },
   title: {
     flexGrow: 1,
@@ -40,6 +41,17 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 40,
     },
   },
+  dividerLeft: {
+    backgroundColor: '#d3c9c0',
+    height: 2,
+    width: '50vw',
+  },
+  dividerRight: {
+    backgroundColor: '#d3c9c0',
+    height: 2,
+    width: '50vw',
+    marginLeft: '30vw',
+  },
 }))
 
 export default function Projects() {
@@ -55,9 +67,11 @@ export default function Projects() {
         <Fade>
           <div className={classes.projects}>
             <SpaceInvaders />
+            <Divider className={classes.dividerLeft} />
           </div>
           <div className={classes.projects}>
             <MaxwellAndSkinner />
+            <Divider className={classes.dividerRight} />
           </div>
           {/* <div className={classes.projects}>
             <Aventyr />

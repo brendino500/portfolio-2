@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '10%',
+    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
@@ -124,6 +124,9 @@ const useStyles = makeStyles((theme) => ({
     width: '35vw',
     margin: '5vh 3vw 0 3vw',
   },
+  icons: {
+    marginLeft: 15,
+  },
 }))
 
 export default function MaxwellAndSkinner() {
@@ -140,7 +143,7 @@ export default function MaxwellAndSkinner() {
         >
           <img
             src="https://i.ibb.co/KXW09Wt/homepage.png"
-            alt="plants"
+            alt="maxwell and skinner home"
             className={classes.projectImg}
           />
         </a>
@@ -182,7 +185,7 @@ export default function MaxwellAndSkinner() {
                 />
               </IconButton>
             </Grid>
-            <Grid>
+            <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
               <SiMaterialUi className={classes.techIcon} />
               <SiReact className={classes.techIcon} />
