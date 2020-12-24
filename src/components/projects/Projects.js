@@ -51,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
     height: 2,
     width: '50vw',
     [theme.breakpoints.between('xs', 'sm')]: {
-      width: '50vw',
-      marginLeft: '15%',
+      width: '60vw',
+      marginLeft: '5%',
     },
   },
   dividerRight: {
@@ -61,8 +61,8 @@ const useStyles = makeStyles((theme) => ({
     width: '50vw',
     marginLeft: '30vw',
     [theme.breakpoints.between('xs', 'sm')]: {
-      width: '50vw',
-      marginLeft: '15%',
+      width: '60vw',
+      marginLeft: '30%',
     },
   },
 }))

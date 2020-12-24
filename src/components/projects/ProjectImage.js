@@ -16,6 +16,3 @@ const ProjectImage = ({ href, src, className }) => {
 }
 
 export default ProjectImage
-
-//"https://sei-project1-tetris.netlify.app/"
-//"https://i.ibb.co/LZcsFxy/tetris2.png"

@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
     width: '80vw',
     display: 'flex',
     marginLeft: '10%',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      marginLeft: 0,
+    },
   },
   title: {
     flexGrow: 1,
@@ -51,6 +54,10 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     width: '50vw',
+    [theme.breakpoints.between('md', 'lg')]: {
+      width: '95vw',
+      marginLeft: 0,
+    },
   },
 }))
 
