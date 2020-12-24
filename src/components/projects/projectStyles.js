@@ -8,9 +8,9 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: 'none',
     height: 400,
     [theme.breakpoints.between('xs', 'sm')]: {
-      width: 550,
-      // marginLeft: 200,
-      height: '80vh',
+      width: '95vw',
+      marginLeft: -30,
+      height: '85vh',
     },
   },
   content: {
@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
     [theme.breakpoints.between('xs', 'sm')]: {
       fontSize: 11,
+      width: '80vw',
     },
     [theme.breakpoints.between('sm', 'md')]: {
       fontSize: 15,
