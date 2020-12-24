@@ -98,6 +98,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#d3c9c0',
     height: '2px',
     width: '9vw',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: '30vw',
+    },
   },
   number: {
     fontSize: 18,

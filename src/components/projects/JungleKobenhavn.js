@@ -7,6 +7,7 @@ import {
   CardContent,
   IconButton,
   Divider,
+  Hidden,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -28,16 +29,21 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: '#323e47',
+    backgroundColor: '#323E47',
     border: 'none',
     boxShadow: 'none',
-    marginBottom: 40,
+    height: 400,
     [theme.breakpoints.between('xs', 'sm')]: {
-      width: 550,
+      width: 500,
+      // marginLeft: 200,
+      height: '80vh',
     },
   },
   content: {
-    width: '30vw',
+    width: 500,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: 300,
+    },
   },
   title: {
     fontSize: 40,
@@ -45,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     letterSpacing: 5,
     [theme.breakpoints.between('xs', 'sm')]: {
-      fontSize: 28,
+      fontSize: 30,
     },
     [theme.breakpoints.between('sm', 'md')]: {
       fontSize: 36,
@@ -59,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 10,
     marginBottom: 5,
     [theme.breakpoints.between('xs', 'sm')]: {
-      fontSize: 20,
+      fontSize: 16,
     },
     [theme.breakpoints.between('sm', 'md')]: {
       fontSize: 22,
@@ -86,7 +92,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     fontSize: 20,
     margin: 5,
-    marginTop: '5%',
   },
   iconLayout: {
     positon: 'absolute',
@@ -95,6 +100,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   linksIcons: {
+    margin: 0,
     [theme.breakpoints.between('xs', 'sm')]: {
       alignItems: 'center',
     },
@@ -103,6 +109,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#d3c9c0',
     height: '2px',
     width: '9vw',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: '30vw',
+    },
   },
   number: {
     fontSize: 18,
@@ -111,14 +120,20 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 2,
     marginTop: 10,
     marginBottom: 5,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      fontSize: 14,
+    },
   },
   projectImg: {
     height: 'auto',
-    width: '35vw',
-    margin: '5vh 0 0 0',
+    width: '25vw',
+    margin: '5vh 3vw 0 3vw',
   },
   details: {
     marginLeft: '3vw',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: '80vw',
+    },
   },
   icons: {
     marginLeft: 10,
@@ -187,22 +202,39 @@ export default function JungleKobenhavn() {
             </Grid>
           </Grid>
         </div>
+        <Hidden smUp>
+          <div>
+            <a
+              href="http://jungle-kobenhavn.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-img"
+            >
+              <img
+                src="https://i.ibb.co/9vMV4z7/JK1.png"
+                alt="plants"
+                className={classes.projectImg}
+              />
+            </a>
+          </div>
+        </Hidden>
       </div>
-
-      <div>
-        <a
-          href="http://jungle-kobenhavn.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-img"
-        >
-          <img
-            src="https://i.ibb.co/9vMV4z7/JK1.png"
-            alt="plants"
-            className={classes.projectImg}
-          />
-        </a>
-      </div>
+      <Hidden smDown>
+        <div>
+          <a
+            href="http://jungle-kobenhavn.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-img"
+          >
+            <img
+              src="https://i.ibb.co/9vMV4z7/JK1.png"
+              alt="plants"
+              className={classes.projectImg}
+            />
+          </a>
+        </div>
+      </Hidden>
     </Card>
   )
 }
