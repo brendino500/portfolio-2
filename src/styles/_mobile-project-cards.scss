@@ -1,0 +1,33 @@
+#project-height > div > div > div > div {
+  background-color: #323e47;
+  border: none;
+  box-shadow: none;
+}
+#project-height
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div.MuiCardContent-root.makeStyles-content-33
+  > hr {
+  color: #d3c9c0;
+}
+
+@media only screen and (max-width: 600px) {
+  #project-height > div > div > div > div {
+    background-color: #323e47;
+    border: none;
+    box-shadow: none;
+  }
+  #project-height
+    > div
+    > div
+    > div
+    > div
+    > div
+    > div.MuiCardContent-root.makeStyles-content-33
+    > hr {
+    color: #d3c9c0;
+  }
+}

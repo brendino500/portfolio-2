@@ -113,19 +113,6 @@ export default function Projects() {
           <div className={classes.projects}>
             <MaxwellAndSkinner />
           </div>
-
-          {/* <div className={classes.projects}>
-            <Apperture />
-          </div>
-          <div className={classes.projects}>
-            <Nalu />
-          </div>
-          <div className={classes.projects}>
-            <WeatherxTfl />
-          </div>
-          <div className={classes.projects}>
-            <Tetris />
-          </div> */}
         </Fade>
       </div>
     </Container>

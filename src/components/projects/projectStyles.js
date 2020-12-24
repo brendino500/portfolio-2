@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
       width: '95vw',
       marginLeft: -30,
       height: '85vh',
+      backgroundColor: '#323E47',
+      border: 'none',
+      boxShadow: 'none',
     },
   },
   content: {

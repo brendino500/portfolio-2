@@ -14,8 +14,13 @@ body {
   background-color: #44535f;
 }
 
+#project-height > div > div > div:nth-child(9) > div {
+  background-color: $background-color;
+}
+
 @import './icons';
 @import './navbar';
+@import './mobile-project-cards';
 @import './project-images';
 @import './about';
 @import './height-pages';
