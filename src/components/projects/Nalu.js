@@ -7,6 +7,7 @@ import {
   CardContent,
   IconButton,
   Divider,
+  Hidden,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import LinkIcon from '@material-ui/icons/Link'
@@ -27,13 +28,21 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: '#323e47',
+    backgroundColor: '#323E47',
     border: 'none',
     boxShadow: 'none',
-    height: 350,
+    height: 400,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: 530,
+      // marginLeft: 200,
+      height: '80vh',
+    },
   },
   content: {
     width: 500,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: 300,
+    },
   },
   title: {
     fontSize: 40,
@@ -41,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#d3c9c0',
     letterSpacing: 5,
     [theme.breakpoints.between('xs', 'sm')]: {
-      fontSize: 28,
+      fontSize: 30,
     },
     [theme.breakpoints.between('sm', 'md')]: {
       fontSize: 36,
@@ -55,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 10,
     marginBottom: 5,
     [theme.breakpoints.between('xs', 'sm')]: {
-      fontSize: 20,
+      fontSize: 16,
     },
     [theme.breakpoints.between('sm', 'md')]: {
       fontSize: 22,
@@ -99,6 +108,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#d3c9c0',
     height: '2px',
     width: '9vw',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: '30vw',
+    },
   },
   number: {
     fontSize: 18,
@@ -107,10 +119,13 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 2,
     marginTop: 10,
     marginBottom: 5,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      fontSize: 14,
+    },
   },
   projectImg: {
     height: 'auto',
-    width: '35vw',
+    width: '25vw',
     margin: '5vh 3vw 0 3vw',
   },
   details: {
@@ -125,20 +140,22 @@ export default function Nalu() {
   const classes = useStyles()
   return (
     <Card className={classes.root}>
-      <div>
-        <a
-          href="https://naluwave.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-img"
-        >
-          <img
-            src="https://i.ibb.co/R9ssBbs/Nalu1.png"
-            alt="nalu home"
-            className={classes.projectImg}
-          />
-        </a>
-      </div>
+      <Hidden smDown>
+        <div>
+          <a
+            href="https://naluwave.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-img"
+          >
+            <img
+              src="https://i.ibb.co/R9ssBbs/Nalu1.png"
+              alt="nalu home"
+              className={classes.projectImg}
+            />
+          </a>
+        </div>
+      </Hidden>
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography className={classes.number}>08 . 2020</Typography>
@@ -196,6 +213,22 @@ export default function Nalu() {
             </Grid>
           </Grid>
         </div>
+        <Hidden smUp>
+          <div>
+            <a
+              href="https://naluwave.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-img"
+            >
+              <img
+                src="https://i.ibb.co/R9ssBbs/Nalu1.png"
+                alt="nalu home"
+                className={classes.projectImg}
+              />
+            </a>
+          </div>
+        </Hidden>
       </div>
     </Card>
   )
