@@ -8,13 +8,9 @@ import {
   Grid,
   Typography,
   CardContent,
-  IconButton,
   Divider,
   Hidden,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
-import LinkIcon from '@material-ui/icons/Link'
-import GitHubIcon from '@material-ui/icons/GitHub'
 import { SiJavascript, SiCss3, SiHtml5, SiNetlify } from 'react-icons/si'
 
 export default function Tetris() {

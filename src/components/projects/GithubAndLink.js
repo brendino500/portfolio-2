@@ -4,6 +4,19 @@ import { Grid, IconButton } from '@material-ui/core'
 import LinkIcon from '@material-ui/icons/Link'
 import GitHubIcon from '@material-ui/icons/GitHub'
 
+const renderProjectLink = (projectHref, profileClassName) => {
+  if (projectHref) {
+    return (
+      <IconButton href={projectHref} target="_blank" rel="noopener noreferrer">
+        <LinkIcon
+          className={('github-link', profileClassName)}
+          fontSize="small"
+        />
+      </IconButton>
+    )
+  }
+}
+
 const GithubAndLink = ({
   gridClassName,
   profileClassName,
@@ -18,12 +31,7 @@ const GithubAndLink = ({
           fontSize="small"
         />
       </IconButton>
-      <IconButton href={projectHref} target="_blank" rel="noopener noreferrer">
-        <LinkIcon
-          className={('github-link', profileClassName)}
-          fontSize="small"
-        />
-      </IconButton>
+      {renderProjectLink(projectHref, profileClassName)}
     </Grid>
   )
 }
