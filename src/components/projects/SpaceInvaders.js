@@ -8,12 +8,9 @@ import {
   Grid,
   Typography,
   CardContent,
-  IconButton,
   Divider,
   Hidden,
 } from '@material-ui/core'
-import LinkIcon from '@material-ui/icons/Link'
-import GitHubIcon from '@material-ui/icons/GitHub'
 import { SiTypescript } from 'react-icons/si'
 
 export default function SpaceInvaders() {
@@ -48,28 +45,12 @@ export default function SpaceInvaders() {
             justify="space-between"
             className={classes.iconLayout}
           >
-            <Grid className={classes.linksIcons}>
-              <IconButton
-                href="https://github.com/brendino500/space-invaders"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon
-                  className={('github-link', classes.profileLinks)}
-                  fontSize="small"
-                />
-              </IconButton>
-              <IconButton
-                href="https://github.com/brendino500/space-invaders"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkIcon
-                  className={('github-link', classes.profileLinks)}
-                  fontSize="small"
-                />
-              </IconButton>
-            </Grid>
+            <GithubAndLink
+              gridClassName={classes.linksIcons}
+              profileClassName={classes.profileLinks}
+              githubHref="https://github.com/brendino500/space-invaders"
+              projectHref="https://github.com/brendino500/space-invaders"
+            />
             <Grid className={classes.icons}>
               <SiTypescript className={classes.techIcon} />
               <img

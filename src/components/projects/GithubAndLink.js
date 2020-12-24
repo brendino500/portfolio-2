@@ -28,7 +28,4 @@ const GithubAndLink = ({
   )
 }
 
-//"https://github.com/brendino500/nalu"
-// "https://naluwave.herokuapp.com/"
-
 export default GithubAndLink

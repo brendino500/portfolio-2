@@ -8,12 +8,9 @@ import {
   Grid,
   Typography,
   CardContent,
-  IconButton,
   Divider,
   Hidden,
 } from '@material-ui/core'
-import LinkIcon from '@material-ui/icons/Link'
-import GitHubIcon from '@material-ui/icons/GitHub'
 import {
   SiJavascript,
   SiCss3,
