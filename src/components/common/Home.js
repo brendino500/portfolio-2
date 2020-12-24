@@ -31,7 +31,7 @@ export default function Home() {
     <Container maxWidth="lg" className={classes.root}>
       <Grid container direction="column" alignItems="flex-start">
         <Slide bottom cascade>
-          <Typography className={classes.title}>Hey, I'm Brenda.</Typography>
+          <Typography className={classes.title}>Hey, I'm B</Typography>
           <br />
           <Typography className={classes.title}>
             Fullstack developer • Plant hoarder

@@ -122,7 +122,7 @@ export default function Tetris() {
           <Typography className={classes.title}>Pong</Typography>
           <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>
-            Solo Project • 1 Days
+            Solo Project • 1 Day
           </Typography>
         </CardContent>
         <div className={classes.text}>

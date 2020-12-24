@@ -77,7 +77,7 @@ export default function Beginner() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <Typography className={classes.subtitle}>BEGINNER</Typography>
+      <Typography className={classes.subtitle}>DABBLED</Typography>
       <Grid
         container
         direction="row"

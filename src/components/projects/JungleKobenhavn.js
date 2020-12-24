@@ -129,7 +129,7 @@ export default function JungleKobenhavn() {
     <Card className={classes.root}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography className={classes.number}>10 . 20</Typography>
+          <Typography className={classes.number}>10 . 2020</Typography>
           <Typography className={classes.title}>Jungle København</Typography>
           <Divider className={classes.divider} />
           <Typography className={classes.subtitle}>
