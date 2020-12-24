@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     border: 'none',
     boxShadow: 'none',
     marginBottom: 40,
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: 550,
+    },
   },
   content: {
     width: '30vw',

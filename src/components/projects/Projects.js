@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: '85%',
     marginTop: '10%',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: '90vw',
+    },
   },
   projectCards: {
     marginTop: '5%',
@@ -47,12 +50,20 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#d3c9c0',
     height: 2,
     width: '50vw',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: '50vw',
+      marginLeft: '30%',
+    },
   },
   dividerRight: {
     backgroundColor: '#d3c9c0',
     height: 2,
     width: '50vw',
     marginLeft: '30vw',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      width: '50vw',
+      marginLeft: '30%',
+    },
   },
 }))
 
