@@ -18,7 +18,6 @@
 - Material UI
 - React
 - [React-fade-in](https://www.npmjs.com/package/react-fade-in)
-- [Robin Dela's Hover Effect](https://github.com/robin-dela/hover-effect)
 - [Whimsicle](whimsical.com)
 
 ---
