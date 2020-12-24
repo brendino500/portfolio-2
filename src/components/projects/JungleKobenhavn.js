@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectImage from './ProjectImage'
 import useStyles from './projectStyles'
+import GithubAndLink from './GithubAndLink'
 
 import {
   Card,
@@ -51,28 +52,12 @@ export default function JungleKobenhavn() {
             justify="space-between"
             className={classes.iconLayout}
           >
-            <Grid className={classes.linksIcons}>
-              <IconButton
-                href="https://github.com/brendino500/junglekobenhavn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon
-                  className={('github-link', classes.profileLinks)}
-                  fontSize="small"
-                />
-              </IconButton>
-              <IconButton
-                href="http://jungle-kobenhavn.herokuapp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkIcon
-                  className={('github-link', classes.profileLinks)}
-                  fontSize="small"
-                />
-              </IconButton>
-            </Grid>
+            <GithubAndLink
+              gridClassName={classes.linksIcons}
+              profileClassName={classes.profileLinks}
+              githubHref="https://github.com/brendino500/junglekobenhavn"
+              projectHref="http://jungle-kobenhavn.herokuapp.com/"
+            />
             <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
               <SiTypescript className={classes.techIcon} />

@@ -125,23 +125,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const image = (
-  <div>
-    <a
-      href="https://sei-project1-tetris.netlify.app/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="project-img"
-    >
-      <img
-        src="https://i.ibb.co/LZcsFxy/tetris2.png"
-        alt="tetris"
-        className={classes.projectImg}
-      />
-    </a>
-  </div>
-)
-
 export default function Tetris() {
   const classes = useStyles()
 
