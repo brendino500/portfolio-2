@@ -49,7 +49,7 @@ export default function SpaceInvaders() {
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
               githubHref="https://github.com/brendino500/space-invaders"
-              projectHref="https://github.com/brendino500/space-invaders"
+              projectHref="https://space-invaders-bt.netlify.app/"
             />
             <Grid className={classes.icons}>
               <SiTypescript className={classes.techIcon} />
@@ -63,7 +63,7 @@ export default function SpaceInvaders() {
         </div>
         <Hidden smUp>
           <ProjectImage
-            href="https://github.com/brendino500/space-invaders"
+            href="https://space-invaders-bt.netlify.app/"
             src="https://i.ibb.co/XxgR9c5/spaceinvaders.png"
             className={classes.projectImg}
           />
