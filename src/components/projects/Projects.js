@@ -26,10 +26,6 @@ export default function Projects() {
       <div className={classes.projectCards}>
         <Fade>
           <div className={classes.projects}>
-            <RPS />
-            <Divider className={classes.dividerRight} />
-          </div>
-          <div className={classes.projects}>
             <SpaceInvaders />
             <Divider className={classes.dividerLeft} />
           </div>
@@ -38,9 +34,13 @@ export default function Projects() {
             <Divider className={classes.dividerRight} />
           </div>
           <div className={classes.projects}>
+            <RPS />
+            <Divider className={classes.dividerRight} />
+          </div>
+          {/* <div className={classes.projects}>
             <Aventyr />
             <Divider className={classes.dividerLeft} />
-          </div>
+          </div> */}
           <div className={classes.projects}>
             <Apperture />
             <Divider className={classes.dividerRight} />
@@ -61,9 +61,9 @@ export default function Projects() {
             <Pong />
             <Divider className={classes.dividerRight} />
           </div>
-          <div className={classes.projects}>
+          {/* <div className={classes.projects}>
             <MaxwellAndSkinner />
-          </div>
+          </div> */}
         </Fade>
       </div>
     </Container>

@@ -11,7 +11,7 @@ import { Card, Grid } from '@material-ui/core'
 
 export default function APPerture() {
   const classes = useStyles()
-  const text = '• Instagram x Unsplash <br />• Fullstack CRUD application'
+  const text = 'Fullstack CRUD application based on Instagram and Unsplash'
   const appLink = 'http://apperture-project.herokuapp.com/'
   const imgLink = 'https://i.ibb.co/FJKBM8Q/Apperture.png'
   const githubLink = 'https://github.com/brendino500/APPerture'

@@ -18,9 +18,10 @@ export default function RPS() {
 
   return (
     <Card className={classes.root}>
+      <DesktopImage appLink={appLink} imgLink={imgLink} />
       <div className={classes.details}>
         <Details
-          date="01 . 21"
+          date="01 . 2021"
           title="Roche, Papier, Ciseaux"
           subtitle="Solo Project • 2 Weeks"
         />
@@ -42,7 +43,6 @@ export default function RPS() {
         </div>
         <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>
-      <DesktopImage appLink={appLink} imgLink={imgLink} />
     </Card>
   )
 }
