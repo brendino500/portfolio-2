@@ -3,8 +3,9 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 import {
   SiJavascript,
   SiCss3,
@@ -20,6 +21,7 @@ import {
 
 export default function JungleKobenhavn() {
   const classes = useStyles()
+  const text = '• Fullstack Ecommerce site using TypeScript & React Hooks'
 
   return (
     <Card className={classes.root}>
@@ -30,11 +32,7 @@ export default function JungleKobenhavn() {
           subtitle="Solo Project • 14 Days"
         />
 
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Fullstack Ecommerce site using TypeScript & React Hooks
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container

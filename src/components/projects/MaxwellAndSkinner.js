@@ -3,8 +3,9 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 
 import {
   SiJavascript,
@@ -18,6 +19,8 @@ import { IoLogoVercel } from 'react-icons/io5'
 
 export default function MaxwellAndSkinner() {
   const classes = useStyles()
+  const text =
+    '• Single page web design using Material UI to improve styling and UX'
 
   return (
     <Card className={classes.root}>
@@ -34,12 +37,7 @@ export default function MaxwellAndSkinner() {
           title="Maxwell & Skinner"
           subtitle="Solo Project • 1 Day"
         />
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Single page web design using Material UI <br />
-            to improve styling and UX
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container

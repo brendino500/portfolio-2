@@ -3,12 +3,14 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 import { SiTypescript } from 'react-icons/si'
 
 export default function SpaceInvaders() {
   const classes = useStyles()
+  const text = '• Game development using Pixi.js'
 
   return (
     <Card className={classes.root}>
@@ -25,11 +27,7 @@ export default function SpaceInvaders() {
           title="Space Invaders"
           subtitle="Paired Project • 2 Months"
         />
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Game development using Pixi.js
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container

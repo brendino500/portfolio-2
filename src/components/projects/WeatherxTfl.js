@@ -3,8 +3,9 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 import {
   SiJavascript,
   SiCss3,
@@ -19,6 +20,7 @@ import {
 
 export default function WeatherxTfl() {
   const classes = useStyles()
+  const text = '• Frontend React app pulling from 5 external APIs'
 
   return (
     <Card className={classes.root}>
@@ -28,12 +30,7 @@ export default function WeatherxTfl() {
           title="Weather x TfL"
           subtitle="Paired Project • 48 Hours"
         />
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Weather x Tfl <br /> • Frontend React app pulling from 5 external
-            API's
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container

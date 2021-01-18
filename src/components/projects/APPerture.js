@@ -3,8 +3,9 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 import { DiDjango } from 'react-icons/di'
 import {
   SiJavascript,
@@ -22,6 +23,7 @@ import {
 
 export default function APPerture() {
   const classes = useStyles()
+  const text = '• Instagram x Unsplash <br />• Fullstack CRUD application'
 
   return (
     <Card className={classes.root}>
@@ -31,11 +33,7 @@ export default function APPerture() {
           title="APPerture"
           subtitle="Paired Project • 7 Days"
         />
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Instagram x Unsplash <br />• Fullstack CRUD application
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container

@@ -3,12 +3,15 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 import { SiJavascript, SiCss3, SiHtml5, SiNetlify } from 'react-icons/si'
 
 export default function Tetris() {
   const classes = useStyles()
+  const text =
+    '• Vanilla JavaScript game coded only 3 weeks into formally learning web development'
 
   return (
     <Card className={classes.root}>
@@ -26,12 +29,7 @@ export default function Tetris() {
           title="Tetris"
           subtitle="Solo Project • 7 Days"
         />
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Vanilla JavaScript game coded only 3 weeks into formally learning
-            web development
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container

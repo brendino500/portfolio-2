@@ -3,8 +3,9 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 import {
   SiJavascript,
   SiJest,
@@ -19,6 +20,7 @@ import {
 
 export default function SpaceInvaders() {
   const classes = useStyles()
+  const text = '• Single page using TDD in Jest & Enzyme'
 
   return (
     <Card className={classes.root}>
@@ -35,11 +37,7 @@ export default function SpaceInvaders() {
           title="Äventyr"
           subtitle="Solo Project • 2 Days"
         />
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Single page using TDD <br />• Jest & Enzyme
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container

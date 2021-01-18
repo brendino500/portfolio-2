@@ -3,8 +3,9 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 
 import {
   SiJavascript,
@@ -19,6 +20,7 @@ import {
 
 export default function RPS() {
   const classes = useStyles()
+  const text = '• Full TDD and SVG animations'
 
   return (
     <Card className={classes.root}>
@@ -28,11 +30,7 @@ export default function RPS() {
           title="Roche, Papier, Ciseaux"
           subtitle="Solo Project • 2 Weeks"
         />
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Full TDD and SVG animations
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container

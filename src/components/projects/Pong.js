@@ -3,12 +3,15 @@ import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
+import ProjectDescription from './components/ProjectDescription'
 
-import { Card, Grid, Typography, Hidden } from '@material-ui/core'
+import { Card, Grid, Hidden } from '@material-ui/core'
 import { SiJava } from 'react-icons/si'
 
 export default function Tetris() {
   const classes = useStyles()
+  const text =
+    '• Game development in Java to refresh on knowledge in a strictly typed language before tackling TypeScript'
 
   return (
     <Card className={classes.root}>
@@ -18,12 +21,7 @@ export default function Tetris() {
           title="Pong"
           subtitle="Solo Project • 1 Day"
         />
-        <div className={classes.text}>
-          <Typography className={classes.text}>
-            • Game development in Java to refresh on knowledge in a strictly
-            typed language before tackling TypeScript
-          </Typography>
-        </div>
+        <ProjectDescription description={text} />
         <div>
           <Grid
             container
