@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-import Fade from 'react-reveal/Fade'
 import {
   AppBar,
   Toolbar,
@@ -14,7 +13,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 import Home from './components/common/Home'
 import Skills from './components/skills/Skills'
-import About from './components/common/About'
+import About from './components/common/about/About'
 import Stalk from './components/common/Stalk'
 import Experience from './components/experience/Experience'
 import Projects from './components/projects/Projects'
