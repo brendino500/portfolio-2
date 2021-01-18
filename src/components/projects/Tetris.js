@@ -2,15 +2,9 @@ import React from 'react'
 import ProjectImage from './ProjectImage'
 import useStyles from './projectStyles'
 import GithubAndLink from './GithubAndLink'
+import Details from './Details'
 
-import {
-  Card,
-  Grid,
-  Typography,
-  CardContent,
-  Divider,
-  Hidden,
-} from '@material-ui/core'
+import { Card, Grid, Typography, Hidden } from '@material-ui/core'
 import { SiJavascript, SiCss3, SiHtml5, SiNetlify } from 'react-icons/si'
 
 export default function Tetris() {
@@ -27,14 +21,11 @@ export default function Tetris() {
       </Hidden>
 
       <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography className={classes.number}>07 . 2020</Typography>
-          <Typography className={classes.title}>Tetris</Typography>
-          <Divider className={classes.divider} />
-          <Typography className={classes.subtitle}>
-            Solo Project • 7 Days
-          </Typography>
-        </CardContent>
+        <Details
+          date="07 . 2020"
+          title="Tetris"
+          subtitle="Solo Project • 7 Days"
+        />
         <div className={classes.text}>
           <Typography className={classes.text}>
             • Vanilla JavaScript game coded only 3 weeks into formally learning
