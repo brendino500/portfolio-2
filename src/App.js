@@ -1,15 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Fade from 'react-reveal/Fade'
-
-import Home from './components/common/Home'
-import Skills from './components/skills/Skills'
-import About from './components/common/About'
-import Stalk from './components/common/Stalk'
-import Experience from './components/experience/Experience'
-import Projects from './components/projects/Projects'
-
-import { makeStyles } from '@material-ui/core/styles'
 import {
   AppBar,
   Toolbar,
@@ -21,49 +12,13 @@ import {
 } from '@material-ui/core/'
 import MenuIcon from '@material-ui/icons/Menu'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  title: {
-    flexGrow: 1,
-  },
-  button: {
-    color: '#d3c9c0',
-    fontFamily: 'Libre Baskerville',
-    letterSpacing: 2,
-  },
-  buttonTitle: {
-    color: '#d3c9c0',
-    fontFamily: 'Libre Baskerville',
-    letterSpacing: 4,
-    fontSize: 20,
-    flexGrow: 1,
-  },
-  buttonGroup: {
-    marginRight: 0,
-  },
-  sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
-  },
-  sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
-  },
-  mobileMenu: {
-    Paper: {
-      backgroundColor: '#d3c9c0',
-    },
-  },
-  burgerIcon: {
-    color: '#d3c9c0',
-  },
-}))
+import Home from './components/common/Home'
+import Skills from './components/skills/Skills'
+import About from './components/common/About'
+import Stalk from './components/common/Stalk'
+import Experience from './components/experience/Experience'
+import Projects from './components/projects/Projects'
+import useStyles from './styles/mainAppStyles'
 
 function App() {
   const classes = useStyles()
