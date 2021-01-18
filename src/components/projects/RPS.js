@@ -13,31 +13,24 @@ import {
   SiMaterialUi,
   SiReact,
   SiNpm,
+  SiJest,
+  SiNetlify,
 } from 'react-icons/si'
-import { IoLogoVercel } from 'react-icons/io5'
 
-export default function MaxwellAndSkinner() {
+export default function RPS() {
   const classes = useStyles()
 
   return (
     <Card className={classes.root}>
-      <Hidden smDown>
-        <ProjectImage
-          href="https://maxwell-skinner.vercel.app/"
-          src="https://i.ibb.co/KXW09Wt/homepage.png"
-          className={classes.projectImg}
-        />
-      </Hidden>
       <div className={classes.details}>
         <Details
-          date="11 . 20"
-          title="Maxwell & Skinner"
-          subtitle="Solo Project • 1 Day"
+          date="01 . 21"
+          title="Roche, Papier, Ciseaux"
+          subtitle="Solo Project • 2 Weeks"
         />
         <div className={classes.text}>
           <Typography className={classes.text}>
-            • Single page web design using Material UI <br />
-            to improve styling and UX
+            • Full TDD and SVG animations
           </Typography>
         </div>
         <div>
@@ -49,28 +42,36 @@ export default function MaxwellAndSkinner() {
             <GithubAndLink
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
-              githubHref="https://github.com/brendino500/maxwell-skinner"
-              projectHref="https://maxwell-skinner.vercel.app/"
+              githubHref="https://github.com/brendino500/rps-jest"
+              projectHref="https://i.ibb.co/fFWpLQC/rps-screenshot.png"
             />
             <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
               <SiMaterialUi className={classes.techIcon} />
+              <SiJest className={classes.techIcon} />
               <SiReact className={classes.techIcon} />
               <SiHtml5 className={classes.techIcon} />
               <SiCss3 className={classes.techIcon} />
               <SiNpm className={classes.techIcon} />
-              <IoLogoVercel className={classes.techIcon} />
+              <SiNetlify className={classes.techIcon} />
             </Grid>
           </Grid>
         </div>
         <Hidden smUp>
           <ProjectImage
-            href="https://maxwell-skinner.vercel.app/"
-            src="https://i.ibb.co/KXW09Wt/homepage.png"
+            href="https://aventyr-login.netlify.app/"
+            src="https://i.ibb.co/X5Yt3hM/aventyr-homepage.png"
             className={classes.projectImg}
           />
         </Hidden>
       </div>
+      <Hidden smDown>
+        <ProjectImage
+          href="https://rpc-bt.netlify.app/"
+          src="https://i.ibb.co/fFWpLQC/rps-screenshot.png"
+          className={classes.projectImg}
+        />
+      </Hidden>
     </Card>
   )
 }
