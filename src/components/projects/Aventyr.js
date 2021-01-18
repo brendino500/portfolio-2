@@ -1,5 +1,4 @@
 import React from 'react'
-import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
@@ -7,7 +6,7 @@ import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
 
-import { Card, Grid, Hidden } from '@material-ui/core'
+import { Card, Grid } from '@material-ui/core'
 import {
   SiJavascript,
   SiJest,

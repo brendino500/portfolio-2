@@ -23,6 +23,9 @@ import {
 export default function JungleKobenhavn() {
   const classes = useStyles()
   const text = '• Fullstack Ecommerce site using TypeScript & React Hooks'
+  const appLink = 'http://jungle-kobenhavn.herokuapp.com/'
+  const imgLink = 'https://i.ibb.co/9vMV4z7/JK1.png'
+  const githubLink = 'https://github.com/brendino500/junglekobenhavn'
 
   return (
     <Card className={classes.root}>
@@ -43,8 +46,8 @@ export default function JungleKobenhavn() {
             <GithubAndLink
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
-              githubHref="https://github.com/brendino500/junglekobenhavn"
-              projectHref="http://jungle-kobenhavn.herokuapp.com/"
+              githubHref={githubLink}
+              projectHref={appLink}
             />
             <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
@@ -61,15 +64,9 @@ export default function JungleKobenhavn() {
             </Grid>
           </Grid>
         </div>
-        <MobileImage
-          appLink="http://jungle-kobenhavn.herokuapp.com/"
-          imgLink="https://i.ibb.co/9vMV4z7/JK1.png"
-        />
+        <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>
-      <DesktopImage
-        appLink="http://jungle-kobenhavn.herokuapp.com/"
-        imgLink="https://i.ibb.co/9vMV4z7/JK1.png"
-      />
+      <DesktopImage appLink={appLink} imgLink={imgLink} />
     </Card>
   )
 }

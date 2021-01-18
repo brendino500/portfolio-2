@@ -1,28 +1,25 @@
 import React from 'react'
-import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
+import MobileImage from './components/MobileImage'
+import DesktopImage from './components/DesktopImage'
 
-import { Card, Grid, Hidden } from '@material-ui/core'
+import { Card, Grid } from '@material-ui/core'
 import { SiJavascript, SiCss3, SiHtml5, SiNetlify } from 'react-icons/si'
 
 export default function Tetris() {
   const classes = useStyles()
   const text =
     '• Vanilla JavaScript game coded only 3 weeks into formally learning web development'
+  const appLink = 'https://sei-project1-tetris.netlify.app/'
+  const imgLink = 'https://i.ibb.co/LZcsFxy/tetris2.png'
+  const githubLink = 'https://github.com/brendino500/tetris-game'
 
   return (
     <Card className={classes.root}>
-      <Hidden smDown>
-        <ProjectImage
-          href="https://sei-project1-tetris.netlify.app/"
-          src="https://i.ibb.co/LZcsFxy/tetris2.png"
-          className={classes.projectImg}
-        />
-      </Hidden>
-
+      <DesktopImage appLink={appLink} imgLink={imgLink} />
       <div className={classes.details}>
         <Details
           date="07 . 2020"
@@ -39,8 +36,8 @@ export default function Tetris() {
             <GithubAndLink
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
-              githubHref="https://github.com/brendino500/tetris-game"
-              projectHref="https://sei-project1-tetris.netlify.app/"
+              githubHref={githubLink}
+              projectHref={appLink}
             />
             <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
@@ -50,13 +47,7 @@ export default function Tetris() {
             </Grid>
           </Grid>
         </div>
-        <Hidden smUp>
-          <ProjectImage
-            href="https://sei-project1-tetris.netlify.app/"
-            src="https://i.ibb.co/LZcsFxy/tetris2.png"
-            className={classes.projectImg}
-          />
-        </Hidden>
+        <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>
     </Card>
   )

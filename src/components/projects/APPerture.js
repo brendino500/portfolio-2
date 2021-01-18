@@ -1,11 +1,12 @@
 import React from 'react'
-import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
+import MobileImage from './components/MobileImage'
+import DesktopImage from './components/DesktopImage'
 
-import { Card, Grid, Hidden } from '@material-ui/core'
+import { Card, Grid } from '@material-ui/core'
 import { DiDjango } from 'react-icons/di'
 import {
   SiJavascript,
@@ -24,6 +25,9 @@ import {
 export default function APPerture() {
   const classes = useStyles()
   const text = '• Instagram x Unsplash <br />• Fullstack CRUD application'
+  const appLink = 'http://apperture-project.herokuapp.com/'
+  const imgLink = 'https://i.ibb.co/FJKBM8Q/Apperture.png'
+  const githubLink = 'https://github.com/brendino500/APPerture'
 
   return (
     <Card className={classes.root}>
@@ -43,8 +47,8 @@ export default function APPerture() {
             <GithubAndLink
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
-              githubHref="https://github.com/brendino500/APPerture"
-              projectHref="http://apperture-project.herokuapp.com/"
+              githubHref={githubLink}
+              projectHref={appLink}
             />
             <Grid>
               <SiJavascript className={classes.techIcon} />
@@ -62,21 +66,9 @@ export default function APPerture() {
             </Grid>
           </Grid>
         </div>
-        <Hidden smUp>
-          <ProjectImage
-            href="http://apperture-project.herokuapp.com/"
-            src="https://i.ibb.co/FJKBM8Q/Apperture.png"
-            className={classes.projectImg}
-          />
-        </Hidden>
+        <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>
-      <Hidden smDown>
-        <ProjectImage
-          href="http://apperture-project.herokuapp.com/"
-          src="https://i.ibb.co/FJKBM8Q/Apperture.png"
-          className={classes.projectImg}
-        />
-      </Hidden>
+      <DesktopImage appLink={appLink} imgLink={imgLink} />
     </Card>
   )
 }

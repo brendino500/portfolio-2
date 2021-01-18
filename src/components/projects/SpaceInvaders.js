@@ -1,26 +1,24 @@
 import React from 'react'
-import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
+import MobileImage from './components/MobileImage'
+import DesktopImage from './components/DesktopImage'
 
-import { Card, Grid, Hidden } from '@material-ui/core'
+import { Card, Grid } from '@material-ui/core'
 import { SiTypescript } from 'react-icons/si'
 
 export default function SpaceInvaders() {
   const classes = useStyles()
   const text = '• Game development using Pixi.js'
+  const appLink = 'https://github.com/brendino500/space-invaders'
+  const imgLink = 'https://i.ibb.co/XxgR9c5/spaceinvaders.png'
+  const githubLink = 'https://github.com/brendino500/space-invaders'
 
   return (
     <Card className={classes.root}>
-      <Hidden smDown>
-        <ProjectImage
-          href="https://github.com/brendino500/space-invaders"
-          src="https://i.ibb.co/XxgR9c5/spaceinvaders.png"
-          className={classes.projectImg}
-        />
-      </Hidden>
+      <DesktopImage appLink={appLink} imgLink={imgLink} />
       <div className={classes.details}>
         <Details
           date="12 . 2020"
@@ -37,8 +35,8 @@ export default function SpaceInvaders() {
             <GithubAndLink
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
-              githubHref="https://github.com/brendino500/space-invaders"
-              projectHref="https://space-invaders-bt.netlify.app/"
+              githubHref={githubLink}
+              projectHref={appLink}
             />
             <Grid className={classes.icons}>
               <SiTypescript className={classes.techIcon} />
@@ -50,13 +48,7 @@ export default function SpaceInvaders() {
             </Grid>
           </Grid>
         </div>
-        <Hidden smUp>
-          <ProjectImage
-            href="https://space-invaders-bt.netlify.app/"
-            src="https://i.ibb.co/XxgR9c5/spaceinvaders.png"
-            className={classes.projectImg}
-          />
-        </Hidden>
+        <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>
     </Card>
   )

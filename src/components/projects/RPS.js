@@ -1,12 +1,12 @@
 import React from 'react'
-import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
+import MobileImage from './components/MobileImage'
+import DesktopImage from './components/DesktopImage'
 
-import { Card, Grid, Hidden } from '@material-ui/core'
-
+import { Card, Grid } from '@material-ui/core'
 import {
   SiJavascript,
   SiCss3,
@@ -21,6 +21,9 @@ import {
 export default function RPS() {
   const classes = useStyles()
   const text = '• Full TDD and SVG animations'
+  const appLink = 'https://rpc-bt.netlify.app/'
+  const imgLink = 'https://i.ibb.co/fFWpLQC/rps-screenshot.png'
+  const githubLink = 'https://github.com/brendino500/rps-jest'
 
   return (
     <Card className={classes.root}>
@@ -40,8 +43,8 @@ export default function RPS() {
             <GithubAndLink
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
-              githubHref="https://github.com/brendino500/rps-jest"
-              projectHref="https://i.ibb.co/fFWpLQC/rps-screenshot.png"
+              githubHref={githubLink}
+              projectHref={appLink}
             />
             <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
@@ -55,21 +58,9 @@ export default function RPS() {
             </Grid>
           </Grid>
         </div>
-        <Hidden smUp>
-          <ProjectImage
-            href="https://aventyr-login.netlify.app/"
-            src="https://i.ibb.co/X5Yt3hM/aventyr-homepage.png"
-            className={classes.projectImg}
-          />
-        </Hidden>
+        <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>
-      <Hidden smDown>
-        <ProjectImage
-          href="https://rpc-bt.netlify.app/"
-          src="https://i.ibb.co/fFWpLQC/rps-screenshot.png"
-          className={classes.projectImg}
-        />
-      </Hidden>
+      <DesktopImage appLink={appLink} imgLink={imgLink} />
     </Card>
   )
 }

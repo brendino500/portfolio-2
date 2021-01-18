@@ -1,11 +1,12 @@
 import React from 'react'
-import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
+import MobileImage from './components/MobileImage'
+import DesktopImage from './components/DesktopImage'
 
-import { Card, Grid, Hidden } from '@material-ui/core'
+import { Card, Grid } from '@material-ui/core'
 import {
   SiJavascript,
   SiCss3,
@@ -22,16 +23,13 @@ import {
 export default function Nalu() {
   const classes = useStyles()
   const text = '•Fullstack MERN app with CRUD functionality'
+  const appLink = 'https://naluwave.herokuapp.com/'
+  const imgLink = 'https://i.ibb.co/R9ssBbs/Nalu1.png'
+  const githubLink = 'https://github.com/brendino500/nalu'
 
   return (
     <Card className={classes.root}>
-      <Hidden smDown>
-        <ProjectImage
-          href="https://naluwave.herokuapp.com/"
-          src="https://i.ibb.co/R9ssBbs/Nalu1.png"
-          className={classes.projectImg}
-        />
-      </Hidden>
+      <DesktopImage appLink={appLink} imgLink={imgLink} />
       <div className={classes.details}>
         <Details
           date="08 . 2020"
@@ -48,8 +46,8 @@ export default function Nalu() {
             <GithubAndLink
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
-              githubHref="https://github.com/brendino500/nalu"
-              projectHref="https://naluwave.herokuapp.com/"
+              githubHref={githubLink}
+              projectHref={appLink}
             />
             <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
@@ -66,13 +64,7 @@ export default function Nalu() {
             </Grid>
           </Grid>
         </div>
-        <Hidden smUp>
-          <ProjectImage
-            href="https://naluwave.herokuapp.com/"
-            src="https://i.ibb.co/R9ssBbs/Nalu1.png"
-            className={classes.projectImg}
-          />
-        </Hidden>
+        <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>
     </Card>
   )
