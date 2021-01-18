@@ -1,11 +1,12 @@
 import React from 'react'
-import ProjectImage from './components/ProjectImage'
 import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
+import MobileImage from './components/MobileImage'
+import DesktopImage from './components/DesktopImage'
 
-import { Card, Grid, Hidden } from '@material-ui/core'
+import { Card, Grid } from '@material-ui/core'
 import {
   SiJavascript,
   SiCss3,
@@ -60,21 +61,15 @@ export default function JungleKobenhavn() {
             </Grid>
           </Grid>
         </div>
-        <Hidden smUp>
-          <ProjectImage
-            href="http://jungle-kobenhavn.herokuapp.com/"
-            src="https://i.ibb.co/9vMV4z7/JK1.png"
-            className={classes.projectImg}
-          />
-        </Hidden>
-      </div>
-      <Hidden smDown>
-        <ProjectImage
-          href="http://jungle-kobenhavn.herokuapp.com/"
-          src="https://i.ibb.co/9vMV4z7/JK1.png"
-          className={classes.projectImg}
+        <MobileImage
+          appLink="http://jungle-kobenhavn.herokuapp.com/"
+          imgLink="https://i.ibb.co/9vMV4z7/JK1.png"
         />
-      </Hidden>
+      </div>
+      <DesktopImage
+        appLink="http://jungle-kobenhavn.herokuapp.com/"
+        imgLink="https://i.ibb.co/9vMV4z7/JK1.png"
+      />
     </Card>
   )
 }

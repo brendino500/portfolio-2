@@ -4,6 +4,8 @@ import useStyles from './styles/projectStyles'
 import GithubAndLink from './components/GithubAndLink'
 import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
+import MobileImage from './components/MobileImage'
+import DesktopImage from './components/DesktopImage'
 
 import { Card, Grid, Hidden } from '@material-ui/core'
 import {
@@ -21,16 +23,13 @@ import {
 export default function SpaceInvaders() {
   const classes = useStyles()
   const text = '• Single page using TDD in Jest & Enzyme'
+  const appLink = 'https://aventyr-login.netlify.app/'
+  const imgLink = 'https://i.ibb.co/X5Yt3hM/aventyr-homepage.png'
+  const githubLink = 'https://github.com/brendino500/aventyr-login'
 
   return (
     <Card className={classes.root}>
-      <Hidden smDown>
-        <ProjectImage
-          href="https://aventyr-login.netlify.app/"
-          src="https://i.ibb.co/X5Yt3hM/aventyr-homepage.png"
-          className={classes.projectImg}
-        />
-      </Hidden>
+      <DesktopImage appLink={appLink} imgLink={imgLink} />
       <div className={classes.details}>
         <Details
           date="11 . 2020"
@@ -47,8 +46,8 @@ export default function SpaceInvaders() {
             <GithubAndLink
               gridClassName={classes.linksIcons}
               profileClassName={classes.profileLinks}
-              githubHref="https://github.com/brendino500/aventyr-login"
-              projectHref="https://aventyr-login.netlify.app/"
+              githubHref={githubLink}
+              projectHref={appLink}
             />
             <Grid className={classes.icons}>
               <SiJavascript className={classes.techIcon} />
@@ -63,13 +62,7 @@ export default function SpaceInvaders() {
             </Grid>
           </Grid>
         </div>
-        <Hidden smUp>
-          <ProjectImage
-            href="https://aventyr-login.netlify.app/"
-            src="https://i.ibb.co/X5Yt3hM/aventyr-homepage.png"
-            className={classes.projectImg}
-          />
-        </Hidden>
+        <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>
     </Card>
   )
