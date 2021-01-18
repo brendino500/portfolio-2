@@ -2,15 +2,9 @@ import React from 'react'
 import ProjectImage from './ProjectImage'
 import useStyles from './projectStyles'
 import GithubAndLink from './GithubAndLink'
+import Details from './Details'
 
-import {
-  Card,
-  Grid,
-  Typography,
-  CardContent,
-  Divider,
-  Hidden,
-} from '@material-ui/core'
+import { Card, Grid, Typography, Hidden } from '@material-ui/core'
 import { DiDjango } from 'react-icons/di'
 import {
   SiJavascript,
@@ -32,14 +26,11 @@ export default function APPerture() {
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography className={classes.number}>09 . 2020</Typography>
-          <Typography className={classes.title}>APPerture</Typography>
-          <Divider className={classes.divider} />
-          <Typography className={classes.subtitle}>
-            Paired Project • 7 Days
-          </Typography>
-        </CardContent>
+        <Details
+          date="09 . 2020"
+          title="APPerture"
+          subtitle="Paired Project • 7 Days"
+        />
         <div className={classes.text}>
           <Typography className={classes.text}>
             • Instagram x Unsplash <br />• Fullstack CRUD application

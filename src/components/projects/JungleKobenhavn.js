@@ -2,15 +2,9 @@ import React from 'react'
 import ProjectImage from './ProjectImage'
 import useStyles from './projectStyles'
 import GithubAndLink from './GithubAndLink'
+import Details from './Details'
 
-import {
-  Card,
-  Grid,
-  Typography,
-  CardContent,
-  Divider,
-  Hidden,
-} from '@material-ui/core'
+import { Card, Grid, Typography, Hidden } from '@material-ui/core'
 import {
   SiJavascript,
   SiCss3,
@@ -30,14 +24,12 @@ export default function JungleKobenhavn() {
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography className={classes.number}>10 . 2020</Typography>
-          <Typography className={classes.title}>Jungle København</Typography>
-          <Divider className={classes.divider} />
-          <Typography className={classes.subtitle}>
-            Solo Project • 14 Days
-          </Typography>
-        </CardContent>
+        <Details
+          date="10 . 2020"
+          title="Jungle København"
+          subtitle="Solo Project • 14 Days"
+        />
+
         <div className={classes.text}>
           <Typography className={classes.text}>
             • Fullstack Ecommerce site using TypeScript & React Hooks

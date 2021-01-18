@@ -2,16 +2,9 @@ import React from 'react'
 import ProjectImage from './ProjectImage'
 import useStyles from './projectStyles'
 import GithubAndLink from './GithubAndLink'
+import Details from './Details'
 
-import {
-  Card,
-  Grid,
-  Typography,
-  CardContent,
-  IconButton,
-  Divider,
-  Hidden,
-} from '@material-ui/core'
+import { Card, Grid, Typography, Hidden } from '@material-ui/core'
 import { SiJava } from 'react-icons/si'
 
 export default function Tetris() {
@@ -20,14 +13,11 @@ export default function Tetris() {
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography className={classes.number}>11 . 2020</Typography>
-          <Typography className={classes.title}>Pong</Typography>
-          <Divider className={classes.divider} />
-          <Typography className={classes.subtitle}>
-            Solo Project • 1 Day
-          </Typography>
-        </CardContent>
+        <Details
+          date="11 . 2020"
+          title="Pong"
+          subtitle="Solo Project • 1 Day"
+        />
         <div className={classes.text}>
           <Typography className={classes.text}>
             • Game development in Java to refresh on knowledge in a strictly
@@ -45,7 +35,6 @@ export default function Tetris() {
                 gridClassName={classes.linksIcons}
                 profileClassName={classes.profileLinks}
                 githubHref="https://github.com/brendino500/pong-java"
-                // projectHref="http://jungle-kobenhavn.herokuapp.com/"
               />
             </Grid>
             <Grid className={classes.icons}>

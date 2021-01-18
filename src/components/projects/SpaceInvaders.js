@@ -2,15 +2,9 @@ import React from 'react'
 import ProjectImage from './ProjectImage'
 import useStyles from './projectStyles'
 import GithubAndLink from './GithubAndLink'
+import Details from './Details'
 
-import {
-  Card,
-  Grid,
-  Typography,
-  CardContent,
-  Divider,
-  Hidden,
-} from '@material-ui/core'
+import { Card, Grid, Typography, Hidden } from '@material-ui/core'
 import { SiTypescript } from 'react-icons/si'
 
 export default function SpaceInvaders() {
@@ -26,14 +20,11 @@ export default function SpaceInvaders() {
         />
       </Hidden>
       <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography className={classes.number}>12 . 2020</Typography>
-          <Typography className={classes.title}>Space Invaders</Typography>
-          <Divider className={classes.divider} />
-          <Typography className={classes.subtitle}>
-            Paired Project • 2 Months
-          </Typography>
-        </CardContent>
+        <Details
+          date="12 . 2020"
+          title="Space Invaders"
+          subtitle="Paired Project • 2 Months"
+        />
         <div className={classes.text}>
           <Typography className={classes.text}>
             • Game development using Pixi.js

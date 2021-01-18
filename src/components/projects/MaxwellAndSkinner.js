@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectImage from './ProjectImage'
 import useStyles from './projectStyles'
 import GithubAndLink from './GithubAndLink'
+import Details from './Details'
 
 import {
   Card,
@@ -36,14 +37,11 @@ export default function MaxwellAndSkinner() {
         />
       </Hidden>
       <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography className={classes.number}>11 . 20</Typography>
-          <Typography className={classes.title}>Maxwell & Skinner</Typography>
-          <Divider className={classes.divider} />
-          <Typography className={classes.subtitle}>
-            Solo Project • 1 Day
-          </Typography>
-        </CardContent>
+        <Details
+          date="11 . 20"
+          title="Maxwell & Skinner"
+          subtitle="Solo Project • 1 Day"
+        />
         <div className={classes.text}>
           <Typography className={classes.text}>
             • Single page web design using Material UI <br />

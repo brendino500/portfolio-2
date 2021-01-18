@@ -2,16 +2,9 @@ import React from 'react'
 import ProjectImage from './ProjectImage'
 import useStyles from './projectStyles'
 import GithubAndLink from './GithubAndLink'
+import Details from './Details'
 
-import {
-  Card,
-  Grid,
-  Typography,
-  CardContent,
-  Divider,
-  Hidden,
-} from '@material-ui/core'
-
+import { Card, Grid, Typography, Hidden } from '@material-ui/core'
 import {
   SiJavascript,
   SiCss3,
@@ -30,14 +23,11 @@ export default function WeatherxTfl() {
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography className={classes.number}>08 . 2020</Typography>
-          <Typography className={classes.title}>Weather x TfL</Typography>
-          <Divider className={classes.divider} />
-          <Typography className={classes.subtitle}>
-            Paired Project • 48 Hours
-          </Typography>
-        </CardContent>
+        <Details
+          date="08 . 2020"
+          title="Weather x TfL"
+          subtitle="Paired Project • 48 Hours"
+        />
         <div className={classes.text}>
           <Typography className={classes.text}>
             • Weather x Tfl <br /> • Frontend React app pulling from 5 external
