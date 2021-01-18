@@ -1,8 +1,8 @@
 import React from 'react'
-import ProjectImage from './ProjectImage'
-import useStyles from './projectStyles'
-import GithubAndLink from './GithubAndLink'
-import Details from './Details'
+import ProjectImage from './components/ProjectImage'
+import useStyles from './styles/projectStyles'
+import GithubAndLink from './components/GithubAndLink'
+import Details from './components/Details'
 
 import { Card, Grid, Typography, Hidden } from '@material-ui/core'
 import {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardContent, Typography, Divider } from '@material-ui/core'
 
-import useStyles from './projectStyles'
+import useStyles from '../styles/projectStyles'
 
 const Details = ({ date, title, subtitle }) => {
   const classes = useStyles()

@@ -9,7 +9,7 @@ import MaxwellAndSkinner from './MaxwellAndSkinner'
 import SpaceInvaders from './SpaceInvaders'
 import Pong from './Pong'
 import RPS from './RPS'
-import useStyles from './mainStyles'
+import useStyles from './styles/mainStyles'
 
 import Fade from 'react-reveal/Fade'
 import { Typography, Container, Divider } from '@material-ui/core'
