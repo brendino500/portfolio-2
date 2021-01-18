@@ -5,9 +5,9 @@ import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
+import PongIcons from './components/icons/PongIcons'
 
 import { Card, Grid } from '@material-ui/core'
-import { SiJava } from 'react-icons/si'
 
 export default function Tetris() {
   const classes = useStyles()
@@ -38,9 +38,7 @@ export default function Tetris() {
                 githubHref={githubLink}
               />
             </Grid>
-            <Grid className={classes.icons}>
-              <SiJava className={classes.techIcon} />
-            </Grid>
+            <PongIcons />
           </Grid>
         </div>
         <MobileImage appLink={githubLink} imgLink={imgLink} />

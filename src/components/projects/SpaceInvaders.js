@@ -5,9 +5,9 @@ import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
+import SpaceInvadersIcons from './components/icons/SpaceInvadersIcons'
 
 import { Card, Grid } from '@material-ui/core'
-import { SiTypescript } from 'react-icons/si'
 
 export default function SpaceInvaders() {
   const classes = useStyles()
@@ -38,14 +38,7 @@ export default function SpaceInvaders() {
               githubHref={githubLink}
               projectHref={appLink}
             />
-            <Grid className={classes.icons}>
-              <SiTypescript className={classes.techIcon} />
-              <img
-                src="https://i.ibb.co/3hPnV9k/00c39b71-e5f2-4ec9-8919-7710afba3f83-200x200.png"
-                alt="pixijs"
-                className="pixi-logo"
-              />
-            </Grid>
+            <SpaceInvadersIcons />
           </Grid>
         </div>
         <MobileImage appLink={appLink} imgLink={imgLink} />

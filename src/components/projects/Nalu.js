@@ -5,20 +5,9 @@ import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
+import NaluIcons from './components/icons/NaluIcons'
 
 import { Card, Grid } from '@material-ui/core'
-import {
-  SiJavascript,
-  SiCss3,
-  SiHtml5,
-  SiBulma,
-  SiSass,
-  SiReact,
-  SiHeroku,
-  SiNpm,
-  SiMongodb,
-  SiNodeDotJs,
-} from 'react-icons/si'
 
 export default function Nalu() {
   const classes = useStyles()
@@ -49,20 +38,8 @@ export default function Nalu() {
               githubHref={githubLink}
               projectHref={appLink}
             />
-            <Grid className={classes.icons}>
-              <SiJavascript className={classes.techIcon} />
-              <SiHtml5 className={classes.techIcon} />
-              <SiCss3 className={classes.techIcon} />
-              <SiSass className={classes.techIcon} />
-              <SiBulma className={classes.techIcon} />
-              <SiReact className={classes.techIcon} />
-              <SiMongodb className={classes.techIcon} />
-              <SiNpm className={classes.techIcon} />
-              <SiNodeDotJs className={classes.techIcon} />
-              <i className="devicon-express-original skills-details-icon"></i>
-              <SiHeroku className={classes.techIcon} />
-            </Grid>
           </Grid>
+          <NaluIcons />
         </div>
         <MobileImage appLink={appLink} imgLink={imgLink} />
       </div>

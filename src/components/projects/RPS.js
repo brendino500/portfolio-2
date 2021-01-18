@@ -5,18 +5,9 @@ import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
+import RPSIcons from './components/icons/RPSIcons'
 
 import { Card, Grid } from '@material-ui/core'
-import {
-  SiJavascript,
-  SiCss3,
-  SiHtml5,
-  SiMaterialUi,
-  SiReact,
-  SiNpm,
-  SiJest,
-  SiNetlify,
-} from 'react-icons/si'
 
 export default function RPS() {
   const classes = useStyles()
@@ -46,16 +37,7 @@ export default function RPS() {
               githubHref={githubLink}
               projectHref={appLink}
             />
-            <Grid className={classes.icons}>
-              <SiJavascript className={classes.techIcon} />
-              <SiMaterialUi className={classes.techIcon} />
-              <SiJest className={classes.techIcon} />
-              <SiReact className={classes.techIcon} />
-              <SiHtml5 className={classes.techIcon} />
-              <SiCss3 className={classes.techIcon} />
-              <SiNpm className={classes.techIcon} />
-              <SiNetlify className={classes.techIcon} />
-            </Grid>
+            <RPSIcons />
           </Grid>
         </div>
         <MobileImage appLink={appLink} imgLink={imgLink} />

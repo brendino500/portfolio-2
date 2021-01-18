@@ -5,19 +5,9 @@ import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
+import WeatherTflIcons from './components/icons/WeatherTflIcons'
 
 import { Card, Grid } from '@material-ui/core'
-import {
-  SiJavascript,
-  SiCss3,
-  SiHtml5,
-  SiBulma,
-  SiSass,
-  SiReact,
-  SiNetlify,
-  SiNpm,
-  SiNodeDotJs,
-} from 'react-icons/si'
 
 export default function WeatherxTfl() {
   const classes = useStyles()
@@ -47,17 +37,7 @@ export default function WeatherxTfl() {
               githubHref={githubLink}
               projectHref={appLink}
             />
-            <Grid className={classes.icons}>
-              <SiJavascript className={classes.techIcon} />
-              <SiHtml5 className={classes.techIcon} />
-              <SiCss3 className={classes.techIcon} />
-              <SiSass className={classes.techIcon} />
-              <SiBulma className={classes.techIcon} />
-              <SiReact className={classes.techIcon} />
-              <SiNpm className={classes.techIcon} />
-              <SiNodeDotJs className={classes.techIcon} />
-              <SiNetlify className={classes.techIcon} />
-            </Grid>
+            <WeatherTflIcons />
           </Grid>
         </div>
         <MobileImage appLink={appLink} imgLink={imgLink} />

@@ -5,17 +5,9 @@ import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
+import MaxwellSkinnerIcons from './components/icons/MaxwellSkinnerIcons'
 
 import { Card, Grid } from '@material-ui/core'
-import {
-  SiJavascript,
-  SiCss3,
-  SiHtml5,
-  SiMaterialUi,
-  SiReact,
-  SiNpm,
-} from 'react-icons/si'
-import { IoLogoVercel } from 'react-icons/io5'
 
 export default function MaxwellAndSkinner() {
   const classes = useStyles()
@@ -47,15 +39,7 @@ export default function MaxwellAndSkinner() {
               githubHref={githubLink}
               projectHref={appLink}
             />
-            <Grid className={classes.icons}>
-              <SiJavascript className={classes.techIcon} />
-              <SiMaterialUi className={classes.techIcon} />
-              <SiReact className={classes.techIcon} />
-              <SiHtml5 className={classes.techIcon} />
-              <SiCss3 className={classes.techIcon} />
-              <SiNpm className={classes.techIcon} />
-              <IoLogoVercel className={classes.techIcon} />
-            </Grid>
+            <MaxwellSkinnerIcons />
           </Grid>
         </div>
         <MobileImage appLink={appLink} imgLink={imgLink} />

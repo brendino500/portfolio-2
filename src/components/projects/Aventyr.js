@@ -5,21 +5,11 @@ import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
+import AventyrIcons from './components/icons/AventyrIcons'
 
 import { Card, Grid } from '@material-ui/core'
-import {
-  SiJavascript,
-  SiJest,
-  SiHtml5,
-  SiMaterialUi,
-  SiReact,
-  SiNpm,
-  SiNodeDotJs,
-  SiAirbnb,
-  SiNetlify,
-} from 'react-icons/si'
 
-export default function SpaceInvaders() {
+export default function Aventyr() {
   const classes = useStyles()
   const text = '• Single page using TDD in Jest & Enzyme'
   const appLink = 'https://aventyr-login.netlify.app/'
@@ -48,17 +38,7 @@ export default function SpaceInvaders() {
               githubHref={githubLink}
               projectHref={appLink}
             />
-            <Grid className={classes.icons}>
-              <SiJavascript className={classes.techIcon} />
-              <SiJest className={classes.techIcon} />
-              <SiAirbnb className={classes.techIcon} />
-              <SiHtml5 className={classes.techIcon} />
-              <SiMaterialUi className={classes.techIcon} />
-              <SiReact className={classes.techIcon} />
-              <SiNpm className={classes.techIcon} />
-              <SiNodeDotJs className={classes.techIcon} />
-              <SiNetlify className={classes.techIcon} />
-            </Grid>
+            <AventyrIcons />
           </Grid>
         </div>
         <MobileImage appLink={appLink} imgLink={imgLink} />

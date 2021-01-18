@@ -5,9 +5,9 @@ import Details from './components/Details'
 import ProjectDescription from './components/ProjectDescription'
 import MobileImage from './components/MobileImage'
 import DesktopImage from './components/DesktopImage'
+import TetrisIcons from './components/icons/TetrisIcons'
 
 import { Card, Grid } from '@material-ui/core'
-import { SiJavascript, SiCss3, SiHtml5, SiNetlify } from 'react-icons/si'
 
 export default function Tetris() {
   const classes = useStyles()
@@ -39,12 +39,7 @@ export default function Tetris() {
               githubHref={githubLink}
               projectHref={appLink}
             />
-            <Grid className={classes.icons}>
-              <SiJavascript className={classes.techIcon} />
-              <SiHtml5 className={classes.techIcon} />
-              <SiCss3 className={classes.techIcon} />
-              <SiNetlify className={classes.techIcon} />
-            </Grid>
+            <TetrisIcons />
           </Grid>
         </div>
         <MobileImage appLink={appLink} imgLink={imgLink} />
