@@ -9,6 +9,7 @@ import MaxwellAndSkinner from './MaxwellAndSkinner'
 import SpaceInvaders from './SpaceInvaders'
 import Pong from './Pong'
 import RPS from './RPS'
+import Brodologi from './Brodologi'
 import useStyles from './styles/mainStyles'
 
 import Fade from 'react-reveal/Fade'
@@ -25,6 +26,10 @@ export default function Projects() {
       </Typography>
       <div className={classes.projectCards}>
         <Fade>
+          <div className={classes.projects}>
+            <Brodologi />
+            <Divider className={classes.dividerRight} />
+          </div>
           <div className={classes.projects}>
             <SpaceInvaders />
             <Divider className={classes.dividerLeft} />
