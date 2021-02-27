@@ -3,7 +3,7 @@ import Theme from '../../Theme'
 import useStyles from './styles/styles'
 
 import { Typography, ThemeProvider, Grid } from '@material-ui/core'
-import { SiJest, SiRedux } from 'react-icons/si'
+import { SiRedux, SiTailwindcss } from 'react-icons/si'
 
 export default function Beginner() {
   const classes = useStyles()
@@ -22,7 +22,7 @@ export default function Beginner() {
             <Typography className={classes.text}>Java</Typography>
           </i>
         </Grid>
-        <Grid className={classes.iconAndText}>
+        {/* <Grid className={classes.iconAndText}>
           <i className="devicon-python-plain skills-details-icon">
             <Typography className={classes.text}>Python</Typography>
           </i>
@@ -31,19 +31,20 @@ export default function Beginner() {
           <i className="devicon-django-plain skills-details-icon">
             <Typography className={classes.text}>Django</Typography>
           </i>
-        </Grid>
+        </Grid> */}
         <Grid className={classes.iconAndText}>
           <i className="devicon-postgresql-plain skills-details-icon">
             <Typography className={classes.text}>PostgreSQL</Typography>
           </i>
         </Grid>
         <Grid className={`${classes.iconAndText} material-ui-icons`}>
-          <SiJest className="devicon-react-original skills-details-icon" />
-          <Typography className={classes.text}>Jest</Typography>
-        </Grid>
-        <Grid className={`${classes.iconAndText} material-ui-icons`}>
           <SiRedux className="devicon-react-original skills-details-icon" />
           <Typography className={classes.text}>Redux</Typography>
+        </Grid>
+        <Grid className={classes.iconAndText}>
+          <i className="devicon-react-original skills-details-icon">
+            <Typography className={classes.text}>React Native</Typography>
+          </i>
         </Grid>
       </Grid>
     </ThemeProvider>

@@ -40,7 +40,7 @@ export default function Projects() {
           </div>
           <div className={classes.projects}>
             <RPS />
-            <Divider className={classes.dividerRight} />
+            <Divider className={classes.dividerLeft} />
           </div>
           {/* <div className={classes.projects}>
             <Aventyr />
@@ -62,11 +62,11 @@ export default function Projects() {
             <Tetris />
             <Divider className={classes.dividerLeft} />
           </div>
-          <div className={classes.projects}>
+          {/* <div className={classes.projects}>
             <Pong />
             <Divider className={classes.dividerRight} />
           </div>
-          {/* <div className={classes.projects}>
+          <div className={classes.projects}>
             <MaxwellAndSkinner />
           </div> */}
         </Fade>

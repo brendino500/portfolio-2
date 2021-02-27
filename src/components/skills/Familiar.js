@@ -4,7 +4,7 @@ import useStyles from './styles/styles'
 
 import { Typography, ThemeProvider, Grid } from '@material-ui/core'
 import { SiHeroku, SiNetlify } from 'react-icons/si'
-import { IoLogoVercel } from 'react-icons/io5'
+import { SiJest } from 'react-icons/si'
 
 export default function Familiar() {
   const classes = useStyles()
@@ -39,16 +39,16 @@ export default function Familiar() {
           </i>
         </Grid>
         <Grid className={`${classes.iconAndText} material-ui-icons`}>
+          <SiJest className="devicon-react-original skills-details-icon" />
+          <Typography className={classes.text}>Jest</Typography>
+        </Grid>
+        <Grid className={`${classes.iconAndText} material-ui-icons`}>
           <SiHeroku className="devicon-react-original skills-details-icon" />
           <Typography className={classes.text}>Heroku</Typography>
         </Grid>
         <Grid className={`${classes.iconAndText} material-ui-icons`}>
           <SiNetlify className="devicon-react-original skills-details-icon" />
           <Typography className={classes.text}>Netlify</Typography>
-        </Grid>
-        <Grid className={`${classes.iconAndText} material-ui-icons`}>
-          <IoLogoVercel className="devicon-react-original skills-details-icon" />
-          <Typography className={classes.text}>Vercel</Typography>
         </Grid>
       </Grid>
     </ThemeProvider>
