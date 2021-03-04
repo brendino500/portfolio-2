@@ -46,9 +46,9 @@ export default function Stalk() {
             text="linkedin.com/in/brendaty"
           />
           <IconsDetails
-            link="https://twitter.com/btcodes"
+            link="https://twitter.com/brendino500"
             icon={twitter}
-            text="@btcodes"
+            text="@brendino500"
           />
         </Grid>
       </Fade>
