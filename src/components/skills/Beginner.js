@@ -3,7 +3,7 @@ import Theme from '../../Theme'
 import useStyles from './styles/styles'
 
 import { Typography, ThemeProvider, Grid } from '@material-ui/core'
-import { SiRedux, SiTailwindcss } from 'react-icons/si'
+import { SiRedux } from 'react-icons/si'
 
 export default function Beginner() {
   const classes = useStyles()
@@ -17,6 +17,11 @@ export default function Beginner() {
         justify="space-evenly"
         alignItems="center"
       >
+        <Grid className={classes.iconAndText}>
+          <i className="devicon-typescript-plain skills-details-icon">
+            <Typography className={classes.text}>TypeScript</Typography>
+          </i>
+        </Grid>
         <Grid className={classes.iconAndText}>
           <i className="devicon-java-plain skills-details-icon">
             <Typography className={classes.text}>Java</Typography>

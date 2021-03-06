@@ -3,8 +3,7 @@ import Theme from '../../Theme'
 import useStyles from './styles/styles'
 
 import { Typography, ThemeProvider, Grid } from '@material-ui/core'
-import { SiHeroku, SiNetlify } from 'react-icons/si'
-import { SiJest } from 'react-icons/si'
+import { SiHeroku, SiNetlify, SiJest, SiTailwindcss } from 'react-icons/si'
 
 export default function Familiar() {
   const classes = useStyles()
@@ -18,11 +17,11 @@ export default function Familiar() {
         justify="space-evenly"
         alignItems="center"
       >
-        <Grid className={classes.iconAndText}>
-          <i className="devicon-typescript-plain skills-details-icon">
-            <Typography className={classes.text}>TypeScript</Typography>
-          </i>
+        <Grid className={`${classes.iconAndText} material-ui-icons`}>
+          <SiTailwindcss className="devicon-react-original skills-details-icon" />
+          <Typography className={classes.text}>Tailwindcss</Typography>
         </Grid>
+
         <Grid className={classes.iconAndText}>
           <i className="devicon-mongodb-plain skills-details-icon">
             <Typography className={classes.text}>MongoDB</Typography>
