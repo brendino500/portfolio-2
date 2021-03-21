@@ -16,7 +16,7 @@ function createData(date, role, location) {
 }
 
 const rows = [
-  createData('2021 - Current', 'Junior Web Developer', '@Square-Enix'),
+  createData('2021 - Current', 'Junior Front End Developer', '@Square-Enix'),
   createData(
     'June 2020 - Sep 2020',
     'Software Engineering Immersive Student',
