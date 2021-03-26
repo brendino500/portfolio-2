@@ -3,7 +3,7 @@ import Theme from '../../Theme'
 import useStyles from './styles/styles'
 
 import { Typography, ThemeProvider, Grid } from '@material-ui/core'
-import { SiRedux } from 'react-icons/si'
+import { SiRedux, SiSvelte } from 'react-icons/si'
 
 export default function Beginner() {
   const classes = useStyles()
@@ -27,6 +27,10 @@ export default function Beginner() {
             <Typography className={classes.text}>Java</Typography>
           </i>
         </Grid>
+        <Grid className={`${classes.iconAndText} material-ui-icons`}>
+          <SiSvelte className="devicon-postgresql-plain skills-details-icon" />
+          <Typography className={classes.text}>Svelte</Typography>
+        </Grid>
         {/* <Grid className={classes.iconAndText}>
           <i className="devicon-python-plain skills-details-icon">
             <Typography className={classes.text}>Python</Typography>
@@ -43,7 +47,7 @@ export default function Beginner() {
           </i>
         </Grid>
         <Grid className={`${classes.iconAndText} material-ui-icons`}>
-          <SiRedux className="devicon-react-original skills-details-icon" />
+          <SiRedux className="devicon-postgresql-plain skills-details-icon" />
           <Typography className={classes.text}>Redux</Typography>
         </Grid>
         <Grid className={classes.iconAndText}>
