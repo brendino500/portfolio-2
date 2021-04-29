@@ -173,6 +173,12 @@ function App() {
                 </Button>
                 <Button
                   className={`${classes.button} menu__item`}
+                  // onClick={() => scrollTo(sectionAboutRef)}
+                >
+                  <span className="menu__item-name">Photos</span>
+                </Button>
+                <Button
+                  className={`${classes.button} menu__item`}
                   onClick={() => scrollTo(sectionStalkRef)}
                 >
                   <span className="menu__item-name">Contact</span>
