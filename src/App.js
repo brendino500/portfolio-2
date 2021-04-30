@@ -18,6 +18,7 @@ import Stalk from './components/common/stalk/Stalk'
 import Experience from './components/experience/Experience'
 import Projects from './components/projects/Projects'
 import useStyles from './styles/mainAppStyles'
+import NavButton from './components/nav/NavButton'
 
 function App() {
   const classes = useStyles()
@@ -115,6 +116,17 @@ function App() {
           className={classes.button}
           onClick={() => {
             handleMobileMenuClose()
+            // scrollTo(sectionAboutRef)
+          }}
+        >
+          PHOTOS
+        </p>
+      </MenuItem>
+      <MenuItem>
+        <p
+          className={classes.button}
+          onClick={() => {
+            handleMobileMenuClose()
             scrollTo(sectionStalkRef)
           }}
         >
@@ -146,43 +158,37 @@ function App() {
               </Typography>
 
               <div className={classes.sectionDesktop}>
-                <Button
-                  className={`${classes.button} menu__item`}
-                  onClick={() => scrollTo(sectionSkillsRef)}
-                >
-                  <span className="menu__item-name">Skills</span>
-                </Button>
-                <Button
-                  className={`${classes.button} menu__item`}
-                  onClick={() => scrollTo(sectionProjectsRef)}
-                >
-                  <span className="menu__item-name">Projects</span>
-                </Button>
-
-                <Button
-                  className={`${classes.button} menu__item`}
-                  onClick={() => scrollTo(sectionExperienceRef)}
-                >
-                  <span className="menu__item-name">Experience</span>
-                </Button>
-                <Button
-                  className={`${classes.button} menu__item`}
-                  onClick={() => scrollTo(sectionAboutRef)}
-                >
-                  <span className="menu__item-name">About</span>
-                </Button>
+                <NavButton
+                  styles={classes.button}
+                  text="Skills"
+                  scroll={() => scrollTo(sectionSkillsRef)}
+                />
+                <NavButton
+                  styles={classes.button}
+                  text="Projects"
+                  scroll={() => scrollTo(sectionProjectsRef)}
+                />
+                <NavButton
+                  styles={classes.button}
+                  text="Experience"
+                  scroll={() => scrollTo(sectionExperienceRef)}
+                />
+                <NavButton
+                  styles={classes.button}
+                  text="About"
+                  scroll={() => scrollTo(sectionAboutRef)}
+                />
                 <Button
                   className={`${classes.button} menu__item`}
                   // onClick={() => scrollTo(sectionAboutRef)}
                 >
                   <span className="menu__item-name">Photos</span>
                 </Button>
-                <Button
-                  className={`${classes.button} menu__item`}
-                  onClick={() => scrollTo(sectionStalkRef)}
-                >
-                  <span className="menu__item-name">Contact</span>
-                </Button>
+                <NavButton
+                  styles={classes.button}
+                  text="Contact"
+                  scroll={() => scrollTo(sectionStalkRef)}
+                />
               </div>
 
               <div className={classes.sectionMobile}>
