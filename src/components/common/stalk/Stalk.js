@@ -8,7 +8,7 @@ import { Container, Grid } from '@material-ui/core'
 
 import useStyles from '../styles/stalkStyles'
 import Title from './Title'
-import Footer from './Footer'
+// import Footer from './Footer'
 import IconsDetails from './IconsDetails'
 
 export default function Stalk() {
@@ -52,7 +52,7 @@ export default function Stalk() {
           />
         </Grid>
       </Fade>
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   )
 }

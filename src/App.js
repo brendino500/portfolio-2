@@ -19,6 +19,7 @@ import Experience from './components/experience/Experience'
 import Projects from './components/projects/Projects'
 import useStyles from './styles/mainAppStyles'
 import NavButton from './components/nav/NavButton'
+import Photos from './components/common/photos/Index'
 
 function App() {
   const classes = useStyles()
