@@ -14,7 +14,7 @@ export default function Home() {
           <Typography className={classes.title}>Hey, I'm B</Typography>
           <br />
           <Typography className={classes.title}>
-            Fullstack developer • Plant hoarder
+            Fullstack developer • Wanna-be ceramicist
           </Typography>
         </Slide>
       </Grid>
